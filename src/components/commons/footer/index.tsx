@@ -15,22 +15,34 @@ function Footer() {
 
         <div className="flex ml-auto space-x-4">
           <Link href="https://github.com/gerpann">
-            <a className="text-2xl text-slate-900 dark:text-white hover:scale-110 duration-200">
+            <a
+              target="_blank"
+              className="text-2xl text-slate-900 dark:text-white hover:scale-110 duration-200"
+            >
               <GithubIcon />
             </a>
           </Link>
           <Link href="https://facebook.com/gerpan.4701">
-            <a className="text-2xl text-sky-500 bg-white rounded-full hover:scale-110 duration-200">
+            <a
+              target="_blank"
+              className="text-2xl text-sky-500 bg-white rounded-full hover:scale-110 duration-200"
+            >
               <FacebookIcon />
             </a>
           </Link>
-          <Link href="https://github.com/gerpann">
-            <a className="text-2xl text-sky-600 bg-white hover:scale-110 duration-200">
+          <Link href="https://linkedin.com/in/nhat-bui-a97373158">
+            <a
+              target="_blank"
+              className="text-2xl text-sky-600 bg-white hover:scale-110 duration-200"
+            >
               <LinkedinIcon />
             </a>
           </Link>
           <Link href="mail:nhaths4701@gmail.com">
-            <a className="text-2xl text-slate-500 dark:text-gray-50 hover:scale-110 duration-200">
+            <a
+              target="_blank"
+              className="text-2xl text-slate-500 dark:text-gray-50 hover:scale-110 duration-200"
+            >
               <EmailIcon />
             </a>
           </Link>
