@@ -30,7 +30,7 @@ const Navbar = () => {
 
         {/* Mobile responsive button */}
         <button
-          className="inline-flex p-3 hover:bg-primary-100 rounded lg:hidden text-white hover:text-primary-500 outline-none"
+          className="inline-flex p-3 hover:bg-primary-100 rounded-xl lg:hidden text-white hover:text-primary-500 outline-none"
           onClick={handleOpenMobileNav}
         >
           <svg
