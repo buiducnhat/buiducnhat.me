@@ -12,7 +12,7 @@ const Navbar = () => {
   const handleOpenMobileNav = () => setOpenMobileNav(!openMobileNav);
 
   return (
-    <nav className="bg-primary-50 dark:bg-gray-800 shadow-primary-200 shadow-md z-[1000] fixed">
+    <nav className="w-full bg-primary-50 dark:bg-gray-800 shadow-primary-200 dark:shadow-gray-900 shadow-md z-[1000] sticky top-0">
       <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 min-h-16 flex items-center flex-wrap">
         {/**Brand */}
         <Link href="/">
