@@ -1,0 +1,13 @@
+.toggleBg:after {
+  content: '';
+  @apply absolute top-0.5 left-0.5 bg-white border border-gray-300 rounded-full h-5 w-5 transition shadow-sm;
+}
+
+input:checked + .toggleBg:after {
+  transform: translateX(100%);
+  @apply border-white;
+}
+
+input:checked + .toggleBg {
+  @apply bg-primary-500 border-primary-500;
+}
