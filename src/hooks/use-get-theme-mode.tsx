@@ -6,7 +6,7 @@ function useGetThemeMode() {
   const [theme, setTheme] = useState<ThemeModes>('light');
 
   useEffect(() => {
-    if (localStorage.theme === 'dark') {
+    if (localStorage.getItem('theme') === 'dark') {
       setTheme('dark');
     } else if (
       !('theme' in localStorage) &&

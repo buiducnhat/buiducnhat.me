@@ -1,13 +1,17 @@
 export const toLightMode = () => {
-  localStorage.theme = 'light';
+  localStorage.setItem('theme', 'light');
   document.documentElement.classList.remove('dark');
 };
 
 export const toDarkMode = () => {
-  localStorage.theme = 'dark';
+  localStorage.setItem('theme', 'dark');
   document.documentElement.classList.add('dark');
 };
 
 export const toOsMode = () => {
-  localStorage.removeItem('theme');
+  if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    localStorage.setItem('theme', 'dark');
+  } else {
+    localStorage.setItem('theme', 'light');
+  }
 };
