@@ -1,21 +1,26 @@
-import type { NextPage } from 'next';
+import type { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next';
 import Link from 'next/link';
+import fs from 'fs';
+import path from 'path';
+import matter from 'gray-matter';
 
 import { Meta } from '@/templates/meta';
 import Layout from '@/templates/layout';
 import Avatar from '@/components/home/avatar';
 import IntroText from '@/components/home/intro-text';
-import { articlesMock } from '@/__mocks__/article.mock';
 import ArticleCard from '@/components/home/article-card';
+import { Article } from '@/models/article.model';
 
-const Home: NextPage = () => {
+const HomePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
+  articles,
+}) => {
   return (
     <Layout
       meta={
         <Meta title="Home | Gerpan" description="Gerpan personal website" />
       }
     >
-      <div className="min-h-[calc(100vh-200px)] flex-col space-y-20">
+      <div className="min-h-[calc(100vh-200px)] flex-col space-y-10 md:space-y-16">
         <div
           className={
             'flex flex-wrap md:flex-nowrap ' +
@@ -33,12 +38,18 @@ const Home: NextPage = () => {
         </div>
 
         <div>
-          <h1 className="inline text-4xl font-bold text-primary-600 border-b-4 border-primary-500">
+          <h1
+            className={
+              'inline text-3xl md:text-4xl font-bold ' +
+              'text-primary-600 border-b-4 ' +
+              'border-primary-500'
+            }
+          >
             Popular articles
           </h1>
 
-          <div className="mt-10 flex flex-col space-y-8">
-            {articlesMock.slice(0, 3).map((article, key) => (
+          <div className="mt-8 flex flex-col space-y-8">
+            {articles?.slice(0, 3).map((article: any, key: number) => (
               <ArticleCard key={key} index={key} article={article} />
             ))}
           </div>
@@ -56,4 +67,26 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+export const getStaticProps: GetStaticProps<{
+  articles: Article[];
+}> = async () => {
+  const files = fs.readdirSync(path.join('src/data/articles'));
+  const articles = files.map((filename) => {
+    const markdownWithMeta = fs.readFileSync(
+      path.join('src/data/articles', filename),
+      'utf-8'
+    );
+    const { data: frontMatter } = matter(markdownWithMeta);
+    return {
+      ...frontMatter,
+      slug: filename.split('.')[0],
+    };
+  }) as Article[];
+  return {
+    props: {
+      articles,
+    },
+  };
+};
+
+export default HomePage;

@@ -28,9 +28,9 @@ function IntroText() {
         'dark:hover:to-primary-800 dark:hover:from-secondary-800 '
       }
     >
-      <p className="text-4xl">{pText1}</p>
-      <p className="text-2xl">{pText2}</p>
-      <p className="text-2xl">{pText3}</p>
+      <p className="text-3xl md:text-4xl">{pText1}</p>
+      <p className="text-xl md:text-2xl">{pText2}</p>
+      <p className="text-xl md:text-2xl">{pText3}</p>
     </motion.div>
   );
 }

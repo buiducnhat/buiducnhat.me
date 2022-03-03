@@ -3,9 +3,9 @@ export interface Article {
   slug: string;
   title: string;
   description: string;
-  cover: string;
+  thumbnailUrl: string;
   category: string;
   content: string;
   tags: string[];
-  createdAt: string;
+  date: string;
 }
