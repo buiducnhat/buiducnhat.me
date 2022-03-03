@@ -9,7 +9,7 @@ import {
 
 function Footer() {
   return (
-    <footer className="w-full bg-primary-100 dark:bg-gray-800 shadow-md">
+    <footer className="w-full bg-primary-200 dark:bg-gray-800 shadow-md">
       <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 h-20 flex items-center">
         <span className="text-xl text-primary-600 dark:text-primary-300 font-bold">© 2022 Gerpan</span>
 

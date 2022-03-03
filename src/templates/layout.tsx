@@ -14,7 +14,7 @@ function Layout(props: LayoutProps) {
   return (
     <div
       id="main"
-      className="bg-primary-50 dark:bg-gray-900 dark:text-gray-100"
+      className="bg-primary-100 dark:bg-gray-900 dark:text-gray-100"
     >
       {meta}
       <Navbar />
