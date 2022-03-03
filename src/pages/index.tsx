@@ -4,12 +4,13 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 
-import { Meta } from '@/templates/meta';
+import Meta  from '@/templates/meta';
 import Layout from '@/templates/layout';
 import Avatar from '@/components/home/avatar';
 import IntroText from '@/components/home/intro-text';
 import ArticleCard from '@/components/home/article-card';
 import { Article } from '@/models/article.model';
+import { route } from '@/configs/routes.config';
 
 const HomePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
   articles,
@@ -55,7 +56,7 @@ const HomePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
           </div>
 
           <div className="mt-10 text-center">
-            <Link href="/blogs">
+            <Link href={route.articles.path}>
               <a className="text-xl text-primary-500 hover:text-primary-600">
                 More articles
               </a>

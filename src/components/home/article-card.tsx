@@ -3,17 +3,17 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 import { Article } from '@/models/article.model';
+import { route } from '@/configs/routes.config';
 
-function ArticleCard({ article, index }: { article: any; index: number }) {
-  console.log(article);
+function ArticleCard({ article, index }: { article: Article; index: number }) {
   return (
     <motion.div
       initial={{ y: 50 }}
       animate={{
         y: 0,
-        transition: { type: 'spring', delay: index / 5, duration: 2 },
+        transition: { type: 'spring', delay: index / 5, duration: 0.6 },
       }}
-      whileHover={{ y: -10, transition: { type: 'spring', duration: 0.5 } }}
+      whileHover={{ y: -10 }}
       className={
         'w-full min-h-[10rem] ' +
         'flex ' +
@@ -30,7 +30,7 @@ function ArticleCard({ article, index }: { article: any; index: number }) {
           'hover:border-l-4 hover:border-primary-500 duration-200'
         }
       >
-        <Link passHref href={article.slug}>
+        <Link passHref href={`${route.articles.path}/${article.slug}`}>
           <h2
             className={
               'mb-3 ' +
