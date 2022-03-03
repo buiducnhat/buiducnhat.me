@@ -17,7 +17,7 @@ function IntroText() {
       initial="hidden"
       animate="visible"
       transition={{ type: 'spring', duration: 2 }}
-      whileHover={{ scale: 1.05}}
+      whileHover={{ scale: 1.05 }}
       variants={variants}
       className={
         'flex-column p-5 space-y-4 rounded-xl select-none ' +

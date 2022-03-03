@@ -14,7 +14,7 @@ function Avatar() {
       animate="visible"
       whileHover="hover"
       variants={variants}
-      transition={{type: 'spring', duration: 1}}
+      transition={{ type: 'spring', duration: 1 }}
       style={{ backgroundImage: 'url(/images/avatar.jpg)' }}
       className="w-32 h-32 bg-cover bg-center rounded-full border-primary-500 border-2"
     />

@@ -4,7 +4,7 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 
-import Meta  from '@/templates/meta';
+import Meta from '@/templates/meta';
 import Layout from '@/templates/layout';
 import Avatar from '@/components/home/avatar';
 import IntroText from '@/components/home/intro-text';

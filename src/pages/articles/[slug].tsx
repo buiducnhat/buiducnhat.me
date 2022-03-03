@@ -8,14 +8,12 @@ import {
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import { MDXRemote } from 'next-mdx-remote';
 import { serialize } from 'next-mdx-remote/serialize';
-import SyntaxHighlighter from 'react-syntax-highlighter';
 
 import Layout from '@/templates/layout';
 import Meta from '@/templates/meta';
 import { Article } from '@/models/article.model';
-import Button from '@/components/commons/button';
+import MDXRender from '@/components/articles/mdx-render';
 
 const ArticlePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
   article,
@@ -24,18 +22,7 @@ const ArticlePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
     <Layout
       meta={<Meta title={article?.title} description={article?.description} />}
     >
-      <div
-        className={
-          'prose prose-slate dark:prose-invert ' +
-          'prose-headings:text-primary-700 dark:prose-headings:text-primary-400 ' +
-          'prose-a:text-primary-600'
-        }
-      >
-        <MDXRemote
-          {...article.content}
-          components={{ Button, SyntaxHighlighter }}
-        />
-      </div>
+      <MDXRender article={article} />
     </Layout>
   );
 };
@@ -66,7 +53,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
     ...frontMatter,
     slug,
     content: mdxSource,
-  } as unknown as Article;
+  } as Article;
   return {
     props: { article },
   };
