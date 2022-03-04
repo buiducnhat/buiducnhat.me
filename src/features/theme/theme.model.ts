@@ -1,4 +1,4 @@
-export type ActionType = 'toLightMode' | 'toDarkMode' | 'toOSMode';
+export type ActionType = 'toLightMode' | 'toDarkMode' | 'toOSMode' | 'setTheme';
 
 export interface ThemeAction {
   type: ActionType;

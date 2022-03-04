@@ -20,6 +20,11 @@ export const themeReducer = (
         ...state,
         type: 'os',
       };
+    case 'setTheme':
+      return {
+        ...state,
+        ...action.payload,
+      };
     default:
       return state;
   }
