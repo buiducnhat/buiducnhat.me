@@ -15,10 +15,13 @@ function Layout(props: LayoutProps) {
     <>
       {meta}
       <Navbar />
-      <div className="bg-primary-100 dark:bg-gray-900 dark:text-gray-100">
-        <div className="container-layout py-12 min-h-[calc(100vh-136px)]">
-          {children}
-        </div>
+      <div
+        className={
+          'bg-primary-100 dark:bg-gray-900 dark:text-gray-100 ' +
+          "min-h-[calc(100vh-theme('spacing.20')-theme('spacing.16'))]"
+        }
+      >
+        <div className="container-layout py-12">{children}</div>
       </div>
       <Footer />
     </>

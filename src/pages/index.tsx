@@ -11,6 +11,7 @@ import IntroText from '@/components/home/intro-text';
 import ArticleCard from '@/components/home/article-card';
 import { Article } from '@/models/article.model';
 import { route } from '@/configs/routes.config';
+import Button from '@/components/commons/button';
 
 const HomePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
   articles,
@@ -30,6 +31,7 @@ const HomePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
             'justify-center md:justify-start'
           }
         >
+          <Button>Hello</Button>
           <div className="flex-grow-1">
             <Avatar />
           </div>

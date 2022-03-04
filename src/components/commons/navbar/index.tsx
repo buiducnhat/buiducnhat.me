@@ -21,9 +21,14 @@ const Navbar = () => {
         'shadow-primary-200 dark:shadow-gray-900'
       }
     >
-      <div className="container-layout min-h-0 md:min-h-[4rem] flex items-center flex-wrap">
+      <div
+        className={
+          "container-layout min-h-0 md:min-h-[theme('spacing.16')] " +
+          'flex items-center flex-wrap'
+        }
+      >
         <Link href={route.home.path}>
-          <a className="inline-flex items-center p-2 mr-4 ">
+          <a>
             <Image src="/images/logo.svg" width={40} height={40} alt="logo" />
           </a>
         </Link>
