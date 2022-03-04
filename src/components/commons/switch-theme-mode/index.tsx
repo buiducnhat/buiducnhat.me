@@ -1,30 +1,33 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext } from 'react';
 import {
   MdLightMode as LightModeIcon,
   MdDarkMode as DarkModeIcon,
 } from 'react-icons/md';
 
 import Switch from '@/components/commons/switch';
-import { toDarkMode, toLightMode } from '@/services/dark-mode.service';
-import useGetThemeMode from '@/hooks/use-get-theme-mode';
+import { ThemeContext } from '@/features/theme/theme.context';
 
 function SwitchThemeModeButton() {
-  const { theme } = useGetThemeMode();
-  const [isDarkMode, setIsDarkMode] = useState(theme === 'dark');
+  const [theme, dispatch] = useContext(ThemeContext);
 
-  useEffect(() => {
-    isDarkMode ? toDarkMode() : toLightMode();
-  }, [isDarkMode]);
+  const toLightMode = () => dispatch({ type: 'toLightMode', payload: null });
+
+  const toDarkMode = () => dispatch({ type: 'toDarkMode', payload: null });
+
+  const onChangeSwitch = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const needToDarkMode = e.target.checked;
+    needToDarkMode ? toDarkMode() : toLightMode();
+  };
 
   return (
     <div className="p-3 flex items-center">
       <Switch
         id="switch-theme-mode-button"
-        checked={isDarkMode}
-        onChange={(e) => setIsDarkMode(e.target.checked)}
+        checked={theme.type === 'dark'}
+        onChange={onChangeSwitch}
       >
         <div className={`ml-2 text-primary-600 dark:text-primary-300 `}>
-          {isDarkMode ? <DarkModeIcon /> : <LightModeIcon />}
+          {theme.type === 'dark' ? <DarkModeIcon /> : <LightModeIcon />}
         </div>
       </Switch>
     </div>
