@@ -16,7 +16,10 @@ function Avatar() {
       variants={variants}
       transition={{ type: 'spring', duration: 1 }}
       style={{ backgroundImage: 'url(/images/avatar.jpg)' }}
-      className="w-32 h-32 bg-cover bg-center rounded-full border-primary-500 border-2"
+      className={
+        'card-shadow w-32 h-32 bg-cover bg-center rounded-full ' +
+        'border-2 border-primary-800 dark:border-primary-900'
+      }
     />
   );
 }

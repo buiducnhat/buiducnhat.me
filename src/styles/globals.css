@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .container-layout {
+    @apply max-w-6xl mx-auto px-4 md:px-8;
+  }
+
+  .card-shadow {
+    @apply shadow-lg shadow-primary-400 hover:shadow-2xl hover:shadow-primary-500 
+      dark:shadow-lg dark:shadow-primary-700 dark:hover:shadow-2xl dark:hover:shadow-primary-600;
+  }
+}

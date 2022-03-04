@@ -42,7 +42,7 @@ const HomePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
           <h1
             className={
               'inline text-3xl md:text-4xl font-bold ' +
-              'text-primary-600 border-b-4 ' +
+              'text-primary-500 border-b-4 ' +
               'border-primary-500'
             }
           >

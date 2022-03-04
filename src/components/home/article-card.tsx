@@ -8,32 +8,29 @@ import { route } from '@/configs/routes.config';
 function ArticleCard({ article, index }: { article: Article; index: number }) {
   return (
     <motion.div
-      initial={{ y: 50 }}
-      animate={{
-        y: 0,
-        transition: { type: 'spring', delay: index / 5, duration: 0.6 },
-      }}
+      // initial={{ y: 50 }}
+      // animate={{
+      //   y: 0,
+      //   transition: { type: 'spring', delay: index / 5, duration: 0.6 },
+      // }}
       whileHover={{ y: -10 }}
       className={
-        'w-full min-h-[10rem] ' +
-        'flex ' +
-        'rounded-xl ' +
-        'shadow-xl shadow-primary-300 dark:shadow-md dark:shadow-primary-900'
+        'w-full min-h-[10rem] ' + 'flex ' + 'rounded-xl ' + 'card-shadow'
       }
     >
       <div
         className={
           'p-5 rounded-xl md:rounded-r-none w-full md:basis-4/5 ' +
-          'bg-gradient-to-l ' +
+          'bg-gradient-to-r ' +
           'from-primary-200 to-primary-100 ' +
-          'dark:from-gray-800 dark:to-gray-700 ' +
-          'hover:border-l-4 hover:border-primary-500 duration-200'
+          'dark:from-gray-900 dark:to-gray-800 ' +
+          'hover:bg-gradient-to-tr'
         }
       >
         <Link passHref href={`${route.articles.path}/${article.slug}`}>
           <h2
             className={
-              'mb-3 ' +
+              'mb-3 inline ' +
               'text-2xl md:text-3xl font-bold ' +
               'text-primary-500 dark:text-primary-500 ' +
               'hover:text-primary-700 dark:hover:text-primary-300 ' +
