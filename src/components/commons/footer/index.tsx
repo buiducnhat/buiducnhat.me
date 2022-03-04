@@ -11,7 +11,7 @@ function Footer() {
   return (
     <footer className="w-full bg-primary-200 dark:bg-gray-800 shadow-md">
       <div className="container-layout h-20 flex items-center">
-        <span className="text-xl text-primary-600 dark:text-primary-300 font-bold">
+        <span className="text-xl text-primary-500 dark:text-primary-300 font-bold">
           © 2022 Gerpan
         </span>
 

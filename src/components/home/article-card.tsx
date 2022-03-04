@@ -8,11 +8,11 @@ import { route } from '@/configs/routes.config';
 function ArticleCard({ article, index }: { article: Article; index: number }) {
   return (
     <motion.div
-      // initial={{ y: 50 }}
-      // animate={{
-      //   y: 0,
-      //   transition: { type: 'spring', delay: index / 5, duration: 0.6 },
-      // }}
+      initial={{ y: 50 }}
+      animate={{
+        y: 0,
+        transition: { type: 'spring', delay: index / 5, duration: 0.6 },
+      }}
       whileHover={{ y: -10 }}
       className={
         'w-full min-h-[10rem] ' + 'flex ' + 'rounded-xl ' + 'card-shadow'

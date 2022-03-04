@@ -20,7 +20,7 @@ function IntroText() {
         'flex-column p-5 space-y-4 rounded-xl select-none ' +
         'text-white ' +
         'card-shadow ' +
-        'bg-gradient-to-tr from-primary-600 to-secondary-600 ' +
+        'bg-gradient-to-tr from-primary-500 to-secondary-500 ' +
         'dark:from-primary-700 dark:to-secondary-700 ' +
         'hover:bg-gradient-to-bl dark:hover:bg-gradient-to-bl'
       }

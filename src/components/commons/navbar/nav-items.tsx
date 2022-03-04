@@ -5,16 +5,23 @@ import { routes } from '@/configs/routes.config';
 
 function NavItems() {
   return (
-    <div className="hidden w-full lg:inline-flex lg:flex-grow lg:w-auto">
-      <div className="lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start  flex flex-col lg:h-auto">
-        {routes.map((route, key) => (
-          <Link key={key} href={route.path}>
-            <a className="lg:inline-flex lg:w-auto w-full px-5 py-2 rounded-xl duration-300 text-primary-600 dark:text-primary-300 font-bold items-center justify-center hover:bg-primary-600 hover:text-white dark:hover:text-white">
-              {route.title}
-            </a>
-          </Link>
-        ))}
-      </div>
+    <div className={'hidden md:flex space-x-1 ml-auto'}>
+      {routes.map((route, key) => (
+        <Link key={key} href={route.path}>
+          <a
+            className={
+              'px-5 py-2 rounded-xl ' +
+              'text-primary-500 dark:text-primary-300 font-bold ' +
+              'hover:bg-gradient-to-tr hover:from-primary-500 hover:to-secondary-500 ' +
+              'dark:hover:from-primary-700 dark:hover:to-secondary-700 ' +
+              'hover:text-white dark:hover:text-white ' +
+              'duration-300'
+            }
+          >
+            {route.title}
+          </a>
+        </Link>
+      ))}
     </div>
   );
 }

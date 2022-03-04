@@ -21,7 +21,7 @@ const HomePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
         <Meta title="Home | Gerpan" description="Gerpan personal website" />
       }
     >
-      <div className="min-h-[calc(100vh-200px)] flex-col space-y-10 md:space-y-16">
+      <div className="flex-col space-y-10 md:space-y-16">
         <div
           className={
             'flex flex-wrap md:flex-nowrap ' +
