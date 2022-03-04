@@ -8,4 +8,5 @@ export interface Article {
   content: any;
   tags: string[];
   date: string;
+  published: boolean;
 }
