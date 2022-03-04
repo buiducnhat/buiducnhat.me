@@ -1,7 +1,7 @@
 import React, { createContext, Dispatch, useEffect, useReducer } from 'react';
 
-import { ThemeState } from './theme.model';
-import { ThemeAction, themeReducer } from './theme.reducer';
+import { ThemeAction, ThemeState } from './theme.model';
+import { themeReducer } from './theme.reducer';
 
 const initialState: ThemeState = {
   type: 'dark',
