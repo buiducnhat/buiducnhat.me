@@ -19,16 +19,19 @@ function SwitchThemeModeButton() {
     needToDarkMode ? toDarkMode() : toLightMode();
   };
 
+  const className = 'ml-2 text-primary-500 dark:text-primary-300';
   return (
-    <div className="p-3 flex items-center">
+    <div className="flex items-center">
       <Switch
         id="switch-theme-mode-button"
         checked={theme.type === 'dark'}
         onChange={onChangeSwitch}
       >
-        <div className={`ml-2 text-primary-600 dark:text-primary-300 `}>
-          {theme.type === 'dark' ? <DarkModeIcon /> : <LightModeIcon />}
-        </div>
+        {theme.type === 'dark' ? (
+          <DarkModeIcon className={className} />
+        ) : (
+          <LightModeIcon className={className} />
+        )}
       </Switch>
     </div>
   );
