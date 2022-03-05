@@ -40,12 +40,15 @@ function SearchModal({ show, handleClose }: SearchModalProps) {
         'flex items-center justify-center'
       }
     >
-      <div ref={ref} className="max-w-xl flex items-center text-2xl">
+      <div
+        ref={ref}
+        className="max-w-xl flex items-center text-base sm:text-xl md:text-2xl"
+      >
         <input
           type="text"
           placeholder="Search for anything..."
           className={
-            'form-input px-4 py-3 bg-transparent text-2xl ' +
+            'form-input p-2 bg-transparent text-base sm:text-xl md:text-2xl ' +
             'text-dracula-purple-600 dark:text-dracula-purple ' +
             'border-0 outline-none focus:ring-0 ' +
             'border-b-2 border-dracula-pink ' +
