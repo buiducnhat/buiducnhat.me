@@ -4,8 +4,12 @@
 }
 
 .ripple:hover {
-  background: theme('colors.dracula-pink.600')
-    radial-gradient(circle, transparent 1%, theme('colors.dracula-pink.600') 1%)
+  background: theme('colors.dracula-purple.600')
+    radial-gradient(
+      circle,
+      transparent 1%,
+      theme('colors.dracula-purple.600') 1%
+    )
     center/15000%;
 }
 

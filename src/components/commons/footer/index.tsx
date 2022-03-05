@@ -9,9 +9,9 @@ import {
 
 function Footer() {
   return (
-    <footer className="w-full bg-dracula-pink-50 dark:bg-dracula-darker-800">
+    <footer className="w-full bg-dracula-purple-50 dark:bg-dracula-darker-800">
       <div className="container-layout min-h-[theme('spacing.20')] flex items-center">
-        <span className="text-xl text-dracula-pink font-bold">
+        <span className="text-xl text-dracula-purple font-bold">
           © 2022 Gerpan
         </span>
 

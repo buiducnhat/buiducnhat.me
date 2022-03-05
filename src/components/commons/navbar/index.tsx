@@ -15,8 +15,8 @@ const Navbar = () => {
     <nav
       className={
         'w-full shadow-md z-[1000] sticky top-0 ' +
-        'bg-dracula-pink-50 dark:bg-dracula-darker-800 ' +
-        'shadow-dracula-pink-200 dark:shadow-dracula-darker-900'
+        'bg-dracula-purple-50 dark:bg-dracula-darker-800 ' +
+        'shadow-dracula-purple-200 dark:shadow-dracula-darker-900'
       }
     >
       <div

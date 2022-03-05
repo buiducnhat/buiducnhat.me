@@ -25,7 +25,7 @@ function ArticleCard({ article, index }: { article: Article; index: number }) {
         className={
           'p-5 md:basis-4/5 ' +
           'bg-gradient-to-tr ' +
-          'from-dracula-pink-100 to-dracula-light-50 ' +
+          'from-dracula-purple-100 to-dracula-light-50 ' +
           'dark:from-dracula-darker-900 dark:to-dracula-darker-800'
         }
       >
@@ -36,7 +36,7 @@ function ArticleCard({ article, index }: { article: Article; index: number }) {
               'text-2xl md:text-3xl font-bold ' +
               'text-dracula-pink-400 dark:text-dracula-pink ' +
               'hover:text-dracula-pink-500 dark:hover:text-dracula-pink-500 ' +
-              'cursor-pointer duration-100'
+              'cursor-pointer duration-100 '
             }
           >
             {article.title}
@@ -49,8 +49,8 @@ function ArticleCard({ article, index }: { article: Article; index: number }) {
               key={key}
               className={
                 'font-mono tracking-tighter ' +
-                'text-dracula-purple-600 dark:text-dracula-purple ' +
-                'border-b-2 border-dracula-purple dark:border-dracula-purple'
+                'text-dracula-purple-400 dark:text-dracula-purple ' +
+                'border-b-2 border-dracula-purple-400 dark:border-dracula-purple'
               }
             >
               <span>{tag}</span>

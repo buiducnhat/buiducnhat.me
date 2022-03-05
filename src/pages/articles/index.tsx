@@ -23,15 +23,15 @@ const ArticlePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
         <Meta title="Home | Gerpan" description="Gerpan personal website" />
       }
     >
-      <SearchModal show={openSearch} setShow={setOpenSearch} />
+      <SearchModal show={openSearch} handleClose={() => setOpenSearch(false)} />
 
       <div className="flex flex-col">
         <div className="mb-3 space-x-5">
           <h1
             className={
               'inline text-3xl md:text-4xl font-bold ' +
-              'text-dracula-pink border-b-4 ' +
-              'border-dracula-pink'
+              'text-dracula-purple border-b-4 ' +
+              'border-dracula-purple'
             }
           >
             My articles

@@ -19,7 +19,7 @@ function SwitchThemeModeButton() {
     needToDarkMode ? toDarkMode() : toLightMode();
   };
 
-  const className = 'ml-2 text-dracula-pink';
+  const className = 'ml-2 text-dracula-purple';
   return (
     <div className="flex items-center">
       <Switch

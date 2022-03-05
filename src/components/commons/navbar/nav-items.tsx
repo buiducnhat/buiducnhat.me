@@ -11,11 +11,12 @@ function NavItems() {
           <a
             className={
               'px-5 py-2 rounded-xl ' +
-              'text-dracula-pink font-bold ' +
-              'hover:bg-gradient-to-tr hover:from-dracula-pink-500 hover:to-dracula-purple-500 ' +
-              'dark:hover:from-dracula-pink-600 dark:hover:to-dracula-purple-600 ' +
-              'hover:text-white dark:hover:text-white ' +
-              'duration-300'
+              'text-dracula-purple font-bold ' +
+              'hover:bg-gradient-to-tr hover:from-dracula-purple-500 hover:to-dracula-pink-500 ' +
+              'dark:hover:from-dracula-purple-600 dark:hover:to-dracula-pink-600 ' +
+              'hover:text-white dark:hover:text-white hover:shadow-lg ' +
+              'hover:shadow-dracula-pink-200 dark:hover:shadow-dracula-pink-900 ' +
+              'duration-200'
             }
           >
             {route.title}

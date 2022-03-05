@@ -11,6 +11,7 @@ import IntroText from '@/components/home/intro-text';
 import ArticleCard from '@/components/articles/article-card';
 import { Article } from '@/models/article.model';
 import { route } from '@/configs/routes.config';
+import PageHeading from '@/components/commons/page-heading';
 
 const HomePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
   articles,
@@ -39,15 +40,7 @@ const HomePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
         </div>
 
         <div>
-          <h1
-            className={
-              'inline text-3xl md:text-4xl font-bold ' +
-              'text-dracula-pink border-b-4 ' +
-              'border-dracula-pink'
-            }
-          >
-            Popular articles
-          </h1>
+          <PageHeading>Popular articles</PageHeading>
 
           <div className="mt-8 flex flex-col space-y-8">
             {articles?.slice(0, 3).map((article: any, key: number) => (
@@ -57,7 +50,7 @@ const HomePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
 
           <div className="mt-10 text-center">
             <Link href={route.articles.path}>
-              <a className="text-xl text-dracula-pink hover:text-dracula-pink-600">
+              <a className="text-xl text-dracula-purple hover:text-dracula-purple-600">
                 More articles
               </a>
             </Link>

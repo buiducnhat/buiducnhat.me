@@ -20,8 +20,8 @@ function IntroText() {
         'flex-column p-5 space-y-4 rounded-xl select-none ' +
         'text-white ' +
         'card-shadow ' +
-        'bg-gradient-to-tr from-dracula-pink to-dracula-purple ' +
-        'dark:from-dracula-pink-600 dark:to-dracula-purple-600 ' +
+        'bg-gradient-to-tr from-dracula-purple to-dracula-pink ' +
+        'dark:from-dracula-purple-600 dark:to-dracula-pink-600 ' +
         'hover:bg-gradient-to-bl dark:hover:bg-gradient-to-bl'
       }
     >
