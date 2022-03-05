@@ -42,8 +42,8 @@ const HomePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
           <h1
             className={
               'inline text-3xl md:text-4xl font-bold ' +
-              'text-primary-500 border-b-4 ' +
-              'border-primary-500'
+              'text-dracula-pink border-b-4 ' +
+              'border-dracula-pink'
             }
           >
             Popular articles
@@ -57,7 +57,7 @@ const HomePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
 
           <div className="mt-10 text-center">
             <Link href={route.articles.path}>
-              <a className="text-xl text-primary-500 hover:text-primary-600">
+              <a className="text-xl text-dracula-pink hover:text-dracula-pink-600">
                 More articles
               </a>
             </Link>

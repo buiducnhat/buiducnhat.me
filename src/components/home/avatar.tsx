@@ -18,7 +18,7 @@ function Avatar() {
       style={{ backgroundImage: 'url(/images/avatar.jpg)' }}
       className={
         'card-shadow w-32 h-32 bg-cover bg-center rounded-full ' +
-        'border-2 border-primary-800 dark:border-primary-900'
+        'border-2 border-dracula-pink'
       }
     />
   );

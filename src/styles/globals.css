@@ -8,7 +8,7 @@
   }
 
   .card-shadow {
-    @apply shadow-lg shadow-primary-400 hover:shadow-2xl hover:shadow-primary-500 
-      dark:shadow-lg dark:shadow-primary-700 dark:hover:shadow-2xl dark:hover:shadow-primary-600;
+    @apply shadow-lg shadow-dracula-pink-200 hover:shadow-2xl hover:shadow-dracula-purple-200
+      dark:shadow-lg dark:shadow-dracula-pink-900 dark:hover:shadow-2xl dark:hover:shadow-dracula-purple-900;
   }
 }

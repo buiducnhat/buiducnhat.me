@@ -15,47 +15,61 @@ function ArticleCard({ article, index }: { article: Article; index: number }) {
       }}
       whileHover={{ y: -10 }}
       className={
-        'w-full min-h-[10rem] ' + 'flex ' + 'rounded-xl ' + 'card-shadow'
+        'w-full min-h-[10rem] ' +
+        'flex overflow-hidden ' +
+        'rounded-xl ' +
+        'card-shadow'
       }
     >
       <div
         className={
-          'p-5 rounded-xl md:rounded-r-none w-full md:basis-4/5 ' +
-          'bg-gradient-to-r ' +
-          'from-primary-200 to-primary-100 ' +
-          'dark:from-gray-800 dark:to-gray-800 ' +
-          'hover:bg-gradient-to-tr'
+          'p-5 md:basis-4/5 ' +
+          'bg-gradient-to-tr ' +
+          'from-dracula-pink-100 to-dracula-light-50 ' +
+          'dark:from-dracula-darker-900 dark:to-dracula-darker-800'
         }
       >
         <Link passHref href={`${route.articles.path}/${article.slug}`}>
           <h2
             className={
-              'mb-3 inline ' +
+              'inline ' +
               'text-2xl md:text-3xl font-bold ' +
-              'text-primary-500 dark:text-primary-500 ' +
-              'hover:text-primary-700 dark:hover:text-primary-300 ' +
-              'cursor-pointer'
+              'text-dracula-pink-400 dark:text-dracula-pink ' +
+              'hover:text-dracula-pink-500 dark:hover:text-dracula-pink-500 ' +
+              'cursor-pointer duration-100'
             }
           >
             {article.title}
           </h2>
         </Link>
 
-        <div className="flex flex-wrap space-x-3">
+        <div className="mt-3 flex flex-wrap space-x-3">
           {article.tags.map((tag: string, key: number) => (
-            <div key={key} className="px-1 border-b-2 border-primary-500">
+            <div
+              key={key}
+              className={
+                'font-mono tracking-tighter ' +
+                'text-dracula-purple-600 dark:text-dracula-purple ' +
+                'border-b-2 border-dracula-purple dark:border-dracula-purple'
+              }
+            >
               <span>{tag}</span>
             </div>
           ))}
         </div>
 
         <div>
-          <h3 className="truncate text-base md:text-xl">
+          <h3
+            className={
+              'truncate text-base md:text-lg ' +
+              'text-dracula-blue-500 dark:text-dracula-blue-400'
+            }
+          >
             {article.description}
           </h3>
         </div>
         <div className="mt-3">
-          <span className="text-slate-600 dark:text-slate-400">
+          <span className="text-dracula-blue-400 dark:text-dracula-blue-500">
             {article.date}
           </span>
         </div>
@@ -63,7 +77,7 @@ function ArticleCard({ article, index }: { article: Article; index: number }) {
 
       <div
         style={{ backgroundImage: `url('/images/placeholder.png')` }}
-        className="z-0 basis-0 md:basis-1/5 rounded-r-xl bg-cover invisible md:visible"
+        className="basis-0 md:basis-1/5 rounded-r-xl bg-cover invisible md:visible"
       />
     </motion.div>
   );

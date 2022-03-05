@@ -11,9 +11,9 @@ function NavItems() {
           <a
             className={
               'px-5 py-2 rounded-xl ' +
-              'text-primary-500 font-bold ' +
-              'hover:bg-gradient-to-tr hover:from-primary-500 hover:to-secondary-500 ' +
-              'dark:hover:from-primary-700 dark:hover:to-secondary-700 ' +
+              'text-dracula-pink font-bold ' +
+              'hover:bg-gradient-to-tr hover:from-dracula-pink-500 hover:to-dracula-purple-500 ' +
+              'dark:hover:from-dracula-pink-600 dark:hover:to-dracula-purple-600 ' +
               'hover:text-white dark:hover:text-white ' +
               'duration-300'
             }

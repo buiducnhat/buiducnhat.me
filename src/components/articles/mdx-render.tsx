@@ -13,8 +13,8 @@ function MDXRender({ article }: MDXRenderProps) {
     <div
       className={
         'prose prose-slate dark:prose-invert ' +
-        'prose-headings:text-primary-700 dark:prose-headings:text-primary-400 ' +
-        'prose-a:text-primary-600 ' +
+        'prose-headings:text-dracula-pink-700 dark:prose-headings:text-dracula-pink-400 ' +
+        'prose-a:text-dracula-pink-600 ' +
         'prose-pre:rounded-xl ' +
         "prose-code:before:content-[''] prose-code:after:content-['']"
       }

@@ -10,6 +10,6 @@ input:checked + .toggleBg:after {
 }
 
 input:checked + .toggleBg {
-  @apply bg-gradient-to-tr from-primary-500 to-secondary-500
+  @apply bg-gradient-to-tr from-dracula-pink to-dracula-purple
     border-none;
 }

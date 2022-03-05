@@ -10,9 +10,9 @@ function Button({ children }: { children: ReactNode }) {
         ' ' +
         'inline-block px-6 py-2.5 rounded-xl ' +
         'text-white font-medium text-sm uppercase ' +
-        'bg-primary-500 ' +
-        'shadow-md shadow-primary-300 dark:shadow-primary-900 ' +
-        'hover:shadow-lg hover:shadow-primary-300 dark:shadow-primary-900 ' +
+        'bg-dracula-pink ' +
+        'shadow-md shadow-dracula-pink-300 dark:shadow-dracula-pink-900 ' +
+        'hover:shadow-lg hover:shadow-dracula-pink-300 dark:shadow-dracula-pink-900 ' +
         'duration-200'
       }
     >

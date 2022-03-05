@@ -23,7 +23,7 @@ function Switch({ id, children, checked, onChange, ...rest }: SwitchProps) {
         className={
           `${styles.toggleBg} ` +
           'h-6 w-11 rounded-full ' +
-          'bg-gray-100 border-2 border-primary-100 ' +
+          'bg-gray-100 border-2 border-dracula-pink-100 ' +
           'duration-300'
         }
       ></div>
