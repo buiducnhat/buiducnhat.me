@@ -11,7 +11,7 @@ function Logo() {
         className={
           'p-2 rounded-xl ' +
           'hover:shadow-xl hover:bg-gradient-to-tr ' +
-          'hover:from-dracula-purple-200 hover:to-dracula-purple-200'
+          'hover:from-dracula-purple-200 hover:to-dracula-pink-200'
         }
       >
         <Image src="/images/logo.svg" width={36} height={36} alt="logo" />

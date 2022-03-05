@@ -9,12 +9,13 @@ import Meta from '@/templates/meta';
 import Layout from '@/templates/layout';
 import ArticleCard from '@/components/articles/article-card';
 import { Article } from '@/models/article.model';
-import Button from '@/components/commons/button';
+import ButtonGradient from '@/components/commons/button/button-grad';
 import SearchModal from '@/components/articles/search-modal';
+import PageHeading from '@/components/commons/page-heading';
 
-const ArticlePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
-  articles,
-}) => {
+const ArticlesPage: NextPage<
+  InferGetStaticPropsType<typeof getStaticProps>
+> = ({ articles }) => {
   const [openSearch, setOpenSearch] = useState(false);
 
   return (
@@ -27,18 +28,10 @@ const ArticlePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
 
       <div className="flex flex-col">
         <div className="mb-3 space-x-5">
-          <h1
-            className={
-              'inline text-3xl md:text-4xl font-bold ' +
-              'text-dracula-purple border-b-4 ' +
-              'border-dracula-purple'
-            }
-          >
-            My articles
-          </h1>
-          <Button onClick={() => setOpenSearch(true)}>
+          <PageHeading>My articles</PageHeading>
+          <ButtonGradient onClick={() => setOpenSearch(true)}>
             <SearchIcon className="text-xl" />
-          </Button>
+          </ButtonGradient>
         </div>
 
         <div className="mt-8 flex flex-col space-y-8">
@@ -73,4 +66,4 @@ export const getStaticProps: GetStaticProps<{
   };
 };
 
-export default ArticlePage;
+export default ArticlesPage;

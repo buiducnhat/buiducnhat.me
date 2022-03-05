@@ -16,7 +16,16 @@ const MobileNavItems: React.FC<MobileNavbarProps> = ({ open }) => {
     >
       {routes.map((route, key) => (
         <Link key={key} href={route.path}>
-          <a className="w-full px-3 py-2 text-center rounded-xl text-dracula-purple font-bold">
+          <a
+            className={
+              'w-full px-3 py-2 text-center rounded-xl ' +
+              'text-dracula-purple font-bold ' +
+              'hover:bg-gradient-to-tr ' +
+              'hover:from-dracula-purple-500 hover:to-dracula-pink-500 ' +
+              'dark:hover:from-dracula-purple-600 dark:hover:to-dracula-pink-600 ' +
+              'hover:text-white dark:hover:text-white hover:shadow-lg'
+            }
+          >
             {route.title}
           </a>
         </Link>

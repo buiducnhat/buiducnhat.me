@@ -34,7 +34,7 @@ function ArticleCard({ article, index }: { article: Article; index: number }) {
             className={
               'inline ' +
               'text-2xl md:text-3xl font-bold ' +
-              'text-dracula-pink-400 dark:text-dracula-pink ' +
+              'text-dracula-pink ' +
               'hover:text-dracula-pink-500 dark:hover:text-dracula-pink-500 ' +
               'cursor-pointer duration-100 '
             }
@@ -48,7 +48,7 @@ function ArticleCard({ article, index }: { article: Article; index: number }) {
             <div
               key={key}
               className={
-                'font-mono tracking-tighter ' +
+                'font-mono font-semibold tracking-tighter ' +
                 'text-dracula-purple-400 dark:text-dracula-purple ' +
                 'border-b-2 border-dracula-purple-400 dark:border-dracula-purple'
               }
