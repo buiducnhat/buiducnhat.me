@@ -8,7 +8,7 @@ function PageHeading({ children }: PageHeadingProps) {
   return (
     <h1
       className={
-        'inline text-3xl md:text-4xl font-bold text-transparent select-none ' +
+        'inline text-2xl sm:text-3xl md:text-4xl font-bold text-transparent select-none ' +
         'border-b-4 border-dracula-purple ' +
         'bg-clip-text bg-gradient-to-tr ' +
         'from-dracula-purple to-dracula-pink ' +

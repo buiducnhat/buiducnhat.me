@@ -30,7 +30,7 @@ const ArticlesPage: NextPage<
         <div className="mb-3 space-x-5">
           <PageHeading>My articles</PageHeading>
           <ButtonGradient onClick={() => setOpenSearch(true)}>
-            <SearchIcon className="text-xl" />
+            <SearchIcon className="text-sm sm:text-base md:text-xl" />
           </ButtonGradient>
         </div>
 
