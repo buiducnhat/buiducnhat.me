@@ -17,7 +17,7 @@ function Layout(props: LayoutProps) {
       <Navbar />
       <div
         className={
-          'bg-primary-50 dark:bg-gray-900 dark:text-gray-100 ' +
+          'bg-primary-50 dark:bg-dracula-bg dark:text-dracula-fg ' +
           "min-h-[calc(100vh-theme('spacing.20')-theme('spacing.16'))]"
         }
       >

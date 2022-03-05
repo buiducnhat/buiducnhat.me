@@ -8,7 +8,7 @@ import Meta from '@/templates/meta';
 import Layout from '@/templates/layout';
 import Avatar from '@/components/home/avatar';
 import IntroText from '@/components/home/intro-text';
-import ArticleCard from '@/components/home/article-card';
+import ArticleCard from '@/components/articles/article-card';
 import { Article } from '@/models/article.model';
 import { route } from '@/configs/routes.config';
 

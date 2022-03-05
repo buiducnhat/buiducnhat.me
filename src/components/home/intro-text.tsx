@@ -21,7 +21,7 @@ function IntroText() {
         'text-white ' +
         'card-shadow ' +
         'bg-gradient-to-tr from-primary-500 to-secondary-500 ' +
-        'dark:from-primary-700 dark:to-secondary-700 ' +
+        'dark:from-primary-600 dark:to-secondary-600 ' +
         'hover:bg-gradient-to-bl dark:hover:bg-gradient-to-bl'
       }
     >

@@ -17,7 +17,7 @@ const Navbar = () => {
     <nav
       className={
         'w-full shadow-md z-[1000] sticky top-0 ' +
-        'bg-primary-50 dark:bg-gray-800 ' +
+        'bg-primary-50 dark:bg-dracula-bg ' +
         'shadow-primary-200 dark:shadow-gray-900'
       }
     >

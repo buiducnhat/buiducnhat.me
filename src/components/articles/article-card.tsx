@@ -23,7 +23,7 @@ function ArticleCard({ article, index }: { article: Article; index: number }) {
           'p-5 rounded-xl md:rounded-r-none w-full md:basis-4/5 ' +
           'bg-gradient-to-r ' +
           'from-primary-200 to-primary-100 ' +
-          'dark:from-gray-900 dark:to-gray-800 ' +
+          'dark:from-gray-800 dark:to-gray-800 ' +
           'hover:bg-gradient-to-tr'
         }
       >
