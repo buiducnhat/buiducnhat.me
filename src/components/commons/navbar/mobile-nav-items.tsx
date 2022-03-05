@@ -16,7 +16,7 @@ const MobileNavItems: React.FC<MobileNavbarProps> = ({ open }) => {
     >
       {routes.map((route, key) => (
         <Link key={key} href={route.path}>
-          <a className="w-full px-3 py-2 text-center rounded-xl text-primary-500 dark:text-primary-300 font-bold">
+          <a className="w-full px-3 py-2 text-center rounded-xl text-primary-500 font-bold">
             {route.title}
           </a>
         </Link>

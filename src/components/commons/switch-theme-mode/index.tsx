@@ -19,7 +19,7 @@ function SwitchThemeModeButton() {
     needToDarkMode ? toDarkMode() : toLightMode();
   };
 
-  const className = 'ml-2 text-primary-500 dark:text-primary-300';
+  const className = 'ml-2 text-primary-500';
   return (
     <div className="flex items-center">
       <Switch

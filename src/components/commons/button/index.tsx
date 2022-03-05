@@ -10,7 +10,7 @@ function Button({ children }: { children: ReactNode }) {
         ' ' +
         'inline-block px-6 py-2.5 rounded-xl ' +
         'text-white font-medium text-sm uppercase ' +
-        'bg-primary-600 ' +
+        'bg-primary-500 ' +
         'shadow-md shadow-primary-300 dark:shadow-primary-900 ' +
         'hover:shadow-lg hover:shadow-primary-300 dark:shadow-primary-900 ' +
         'duration-200'
