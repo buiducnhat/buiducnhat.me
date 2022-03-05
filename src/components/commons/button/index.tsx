@@ -2,7 +2,9 @@ import React, { ReactNode } from 'react';
 
 import styles from './button.module.css';
 
-function Button({ children }: { children: ReactNode }) {
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {}
+
+function Button({ children, ...rest }: ButtonProps) {
   return (
     <button
       className={
@@ -15,6 +17,7 @@ function Button({ children }: { children: ReactNode }) {
         'hover:shadow-lg hover:shadow-dracula-pink-300 dark:shadow-dracula-pink-900 ' +
         'duration-200'
       }
+      {...rest}
     >
       {children}
     </button>
