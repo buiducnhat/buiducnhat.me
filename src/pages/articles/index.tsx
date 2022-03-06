@@ -33,10 +33,10 @@ const ArticlesPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = (
     >
       <div className="flex flex-col">
         <div className="mb-3 flex flex-wrap space-y-3 sm:space-y-0">
-          <div className="basis-full sm:basis-1/2">
+          <div className="basis-full sm:basis-1/3">
             <PageHeading>My articles</PageHeading>
           </div>
-          <div className="basis-full sm:basis-1/2 sm:flex sm:justify-end">
+          <div className="basis-full sm:basis-0 sm:ml-auto">
             <SearchArticlesInput
               value={searchInput}
               setValue={setSearchInput}
