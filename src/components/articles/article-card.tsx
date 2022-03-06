@@ -76,7 +76,11 @@ function ArticleCard({ article, index }: { article: Article; index: number }) {
       </div>
 
       <div
-        style={{ backgroundImage: `url('/images/placeholder.png')` }}
+        style={{
+          backgroundImage: `url(${
+            article.thumbnailUrl || '/images/placeholder.png'
+          })`,
+        }}
         className="basis-0 md:basis-1/5 rounded-r-xl bg-cover invisible md:visible"
       />
     </motion.div>

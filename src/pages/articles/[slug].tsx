@@ -22,7 +22,12 @@ const ArticlePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
     <Layout
       meta={<Meta title={article?.title} description={article?.description} />}
     >
-      <MDXRender article={article} />
+      <div className="flex">
+        <div className="basis-2/3">
+          <MDXRender article={article} />
+        </div>
+        <p>hehe</p>
+      </div>
     </Layout>
   );
 };

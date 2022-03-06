@@ -45,7 +45,7 @@ const ArticlesPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = (
         </div>
 
         <div className="mt-8 flex flex-col space-y-8">
-          {articles?.slice(0, 3).map((article: any, key: number) => (
+          {articles?.map((article: any, key: number) => (
             <ArticleCard key={key} index={key} article={article} />
           ))}
         </div>

@@ -10,12 +10,16 @@ interface MDXRenderProps {
 
 function MDXRender({ article }: MDXRenderProps) {
   return (
-    <div
+    <article
       className={
         'prose prose-slate dark:prose-invert ' +
-        'prose-headings:text-dracula-purple-700 dark:prose-headings:text-dracula-purple-400 ' +
-        'prose-a:text-dracula-purple-600 ' +
+        'prose-headings:text-dracula-purple-600 dark:prose-headings:text-dracula-purple ' +
+        'prose-a:text-dracula-pink dark:prose-a:text-dracula-pink ' +
+        'prose-a:no-underline prose-a:duration-200 ' +
+        'hover:prose-a:text-dracula-pink-500 dark:hover:prose-a:text-dracula-pink-500 ' +
+        'prose-li:marker:text-dracula-dark-500 ' +
         'prose-pre:rounded-xl ' +
+        'prose-img:rounded-xl ' +
         "prose-code:before:content-[''] prose-code:after:content-['']"
       }
     >
@@ -42,7 +46,7 @@ function MDXRender({ article }: MDXRenderProps) {
           },
         }}
       />
-    </div>
+    </article>
   );
 }
 
