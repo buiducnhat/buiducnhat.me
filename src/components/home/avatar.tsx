@@ -15,7 +15,7 @@ function Avatar() {
       whileHover="hover"
       variants={variants}
       transition={{ type: 'spring', duration: 1 }}
-      style={{ backgroundImage: 'url(/images/avatar.jpg)' }}
+      style={{ backgroundImage: 'url(/assets/images/avatar.jpg)' }}
       className={
         'card-shadow w-32 h-32 bg-cover bg-center rounded-full ' +
         'border-2 border-dracula-purple'

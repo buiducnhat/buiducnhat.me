@@ -14,7 +14,7 @@ function Logo() {
           'hover:from-dracula-purple-200 hover:to-dracula-pink-200'
         }
       >
-        <Image src="/images/logo.svg" width={36} height={36} alt="logo" />
+        <Image src="/assets/images/logo.svg" width={36} height={36} alt="logo" />
       </a>
     </Link>
   );
