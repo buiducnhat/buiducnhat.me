@@ -20,6 +20,8 @@ function MDXRender({ article }: MDXRenderProps) {
         'prose-li:marker:text-dracula-dark-500 ' +
         'prose-pre:rounded-xl ' +
         'prose-img:rounded-xl ' +
+        'prose-h2:scroll-mt-20 ' +
+        'prose-h3:scroll-mt-20 ' +
         "prose-code:before:content-[''] prose-code:after:content-['']"
       }
     >

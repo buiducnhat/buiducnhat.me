@@ -43,7 +43,7 @@ function Footer() {
           <Link href="mail:nhaths4701@gmail.com">
             <a
               target="_blank"
-              className="text-slate-500 dark:text-gray-50 hover:scale-110 duration-200"
+              className="text-dracula-blue dark:text-dracula-light hover:scale-110 duration-200"
             >
               <EmailIcon />
             </a>
