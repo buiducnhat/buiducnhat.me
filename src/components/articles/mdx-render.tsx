@@ -12,7 +12,7 @@ function MDXRender({ article }: MDXRenderProps) {
   return (
     <article
       className={
-        'prose prose-slate dark:prose-invert ' +
+        'prose max-w-none prose-slate dark:prose-invert ' +
         'prose-headings:text-dracula-purple-600 dark:prose-headings:text-dracula-purple ' +
         'prose-a:text-dracula-pink dark:prose-a:text-dracula-pink ' +
         'prose-a:no-underline prose-a:duration-200 ' +
