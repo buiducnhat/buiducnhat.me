@@ -12,10 +12,10 @@ function Button({ children, ...rest }: ButtonProps) {
         ' ' +
         'inline-block px-6 py-2.5 rounded-xl ' +
         'text-white font-medium text-sm uppercase ' +
-        'bg-dracula-purple ' +
-        'shadow-md shadow-dracula-purple-300 dark:shadow-dracula-purple-900 ' +
-        'hover:shadow-lg hover:shadow-dracula-purple-300 dark:shadow-dracula-purple-900 ' +
-        'duration-200'
+        'bg-dracula-purple-400 ' +
+        'shadow-md shadow-dracula-purple-400 dark:shadow-dracula-purple-800 ' +
+        'hover:shadow-lg hover:shadow-dracula-purple-400 dark:shadow-dracula-purple-800 ' +
+        'duration-300'
       }
       {...rest}
     >

@@ -14,7 +14,7 @@
 }
 
 .ripple:active {
-  background-color: theme('colors.dracula-purple.500');
+  background-color: theme('colors.dracula-purple.300');
   background-size: 100%;
   transition: background 0s;
 }

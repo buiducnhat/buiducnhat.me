@@ -23,7 +23,7 @@ function ArticleCard({ article, index }: { article: Article; index: number }) {
     >
       <div
         className={
-          'p-5 basis-full md:basis-4/5 ' +
+          'p-5 basis-full md:basis-3/4 ' +
           'bg-gradient-to-tr ' +
           'from-dracula-purple-100 to-dracula-light-50 ' +
           'dark:from-dracula-darker-900 dark:to-dracula-darker-800'
@@ -81,7 +81,7 @@ function ArticleCard({ article, index }: { article: Article; index: number }) {
             article.thumbnailUrl || '/images/placeholder.png'
           })`,
         }}
-        className="basis-0 md:basis-1/5 rounded-r-xl bg-cover invisible md:visible"
+        className="basis-0 md:basis-1/4 rounded-r-xl bg-cover invisible md:visible"
       />
     </motion.div>
   );
