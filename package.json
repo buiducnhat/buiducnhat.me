@@ -32,6 +32,7 @@
     "next-mdx-remote": "^4.0.0",
     "postcss": "^8.4.7",
     "prettier": "^2.5.1",
+    "react-html-props": "^1.0.32",
     "tailwind-dracula": "^1.0.7",
     "tailwindcss": "^3.0.23",
     "typescript": "4.5.5"

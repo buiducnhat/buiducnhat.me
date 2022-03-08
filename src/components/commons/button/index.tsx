@@ -1,8 +1,7 @@
 import React from 'react';
+import { ButtonProps } from 'react-html-props';
 
 import styles from './button.module.css';
-
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {}
 
 function Button({ children, ...rest }: ButtonProps) {
   return (

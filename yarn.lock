@@ -2683,6 +2683,11 @@ react-dom@17.0.2:
     object-assign "^4.1.1"
     scheduler "^0.20.2"
 
+react-html-props@^1.0.32:
+  version "1.0.32"
+  resolved "https://registry.yarnpkg.com/react-html-props/-/react-html-props-1.0.32.tgz#3bcd0ff09d582a5c304241a6ccb45a640b9d0769"
+  integrity sha512-iXw0ojB4oz9Jer8fUfTB68Jh7WyXrMIA8PEfCStd7ukBU6ABVg7H0mJfo9fQywJV2TmyxQ+MoT8KxepkQCB1Ag==
+
 react-icons@^4.3.1:
   version "4.3.1"
   resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-4.3.1.tgz#2fa92aebbbc71f43d2db2ed1aed07361124e91ca"

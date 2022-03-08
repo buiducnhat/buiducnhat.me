@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion, Variants } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 import { INTRO_TEXT } from '@/configs/constants/intro-text.constant';
 

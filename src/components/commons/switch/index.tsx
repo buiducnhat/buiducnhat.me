@@ -1,8 +1,9 @@
-import React, { HTMLProps, InputHTMLAttributes } from 'react';
+import React from 'react';
+import { InputProps } from 'react-html-props';
 
 import styles from './switch.module.css';
 
-interface SwitchProps extends HTMLProps<HTMLInputElement> {
+interface SwitchProps extends InputProps {
   id: string;
   checked: boolean;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;

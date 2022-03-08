@@ -1,9 +1,7 @@
 import React from 'react';
+import { ButtonProps } from 'react-html-props';
 
-interface ButtonGradientProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {}
-
-function ButtonGradient({ children, ...rest }: ButtonGradientProps) {
+function ButtonGradient({ children, ...rest }: ButtonProps) {
   return (
     <button
       className={

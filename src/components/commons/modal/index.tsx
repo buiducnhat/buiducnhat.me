@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
+import { DivProps } from 'react-html-props';
 
-interface ModalProps extends React.BaseHTMLAttributes<HTMLDivElement> {
+interface ModalProps extends DivProps {
   show: boolean;
   handleClose: () => void;
 }
