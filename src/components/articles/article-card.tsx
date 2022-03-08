@@ -14,16 +14,11 @@ function ArticleCard({ article, index }: { article: Article; index: number }) {
         transition: { type: 'spring', delay: index / 5, duration: 0.6 },
       }}
       whileHover={{ y: -10 }}
-      className={
-        'w-full min-h-[10rem] ' +
-        'flex overflow-hidden ' +
-        'rounded-xl ' +
-        'card-shadow'
-      }
+      className={'w-full flex rounded-xl overflow-hidden ' + 'card-shadow'}
     >
       <div
         className={
-          'p-5 basis-full md:basis-3/4 ' +
+          'p-5 w-full md:w-3/4 ' +
           'bg-gradient-to-tr ' +
           'from-dracula-purple-100 to-dracula-light-50 ' +
           'dark:from-dracula-darker-900 dark:to-dracula-darker-800'
@@ -32,8 +27,8 @@ function ArticleCard({ article, index }: { article: Article; index: number }) {
         <Link passHref href={`${route.articles.path}/${article.slug}`}>
           <h2
             className={
-              'inline ' +
-              'text-xl sm:text-2xl md:text-3xl font-bold ' +
+              'break-words leading-5 ' +
+              'text-lg sm-text:xl md:text-2xl font-bold ' +
               'text-dracula-pink ' +
               'hover:text-dracula-pink-500 dark:hover:text-dracula-pink-500 ' +
               'cursor-pointer duration-100 '
@@ -48,7 +43,7 @@ function ArticleCard({ article, index }: { article: Article; index: number }) {
             <div
               key={key}
               className={
-                'text-sm sm:text-base font-mono font-semibold tracking-tighter ' +
+                'text-sm md:text-base font-mono font-semibold tracking-tighter ' +
                 'text-dracula-purple-400 dark:text-dracula-purple ' +
                 'border-b-2 border-dracula-purple-400 dark:border-dracula-purple'
               }
@@ -59,17 +54,17 @@ function ArticleCard({ article, index }: { article: Article; index: number }) {
         </div>
 
         <div>
-          <h3
+          <p
             className={
-              'truncate text-sm sm:text-base md:text-lg ' +
+              'text-ellipsis whitespace-nowrap overflow-hidden text-sm md:text-base ' +
               'text-dracula-blue-500 dark:text-dracula-blue-400'
             }
           >
             {article.description}
-          </h3>
+          </p>
         </div>
         <div className="mt-3">
-          <span className="text-sm sm:text-base text-dracula-blue-400 dark:text-dracula-blue-500">
+          <span className="text-sm md:text-base text-dracula-blue-400 dark:text-dracula-blue-500">
             {article.date}
           </span>
         </div>
@@ -81,7 +76,7 @@ function ArticleCard({ article, index }: { article: Article; index: number }) {
             article.thumbnailUrl || '/images/placeholder.png'
           })`,
         }}
-        className="basis-0 md:basis-1/4 rounded-r-xl bg-cover invisible md:visible"
+        className="bg-cover invisible md:visible md:w-1/4"
       />
     </motion.div>
   );
