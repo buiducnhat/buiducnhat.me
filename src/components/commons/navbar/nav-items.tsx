@@ -1,13 +1,13 @@
 import React from 'react';
-import Link from 'next/link';
 
 import { routes } from '@/configs/routes.config';
+import NoScrollLink from '@/components/commons/no-scroll-link';
 
 function NavItems() {
   return (
     <div className={'hidden md:flex space-x-1 ml-auto'}>
       {routes.map((route, key) => (
-        <Link key={key} href={route.path}>
+        <NoScrollLink key={key} href={route.path}>
           <a
             className={
               'px-5 py-2 rounded-xl ' +
@@ -21,7 +21,7 @@ function NavItems() {
           >
             {route.title}
           </a>
-        </Link>
+        </NoScrollLink>
       ))}
     </div>
   );

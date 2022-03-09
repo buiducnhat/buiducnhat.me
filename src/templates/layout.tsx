@@ -18,7 +18,12 @@ function Layout(props: LayoutProps) {
 
   const variants: Variants = {
     hidden: { opacity: 1, x: -200, y: 0 },
-    enter: { opacity: 1, x: 0, y: 0 },
+    enter: {
+      opacity: 1,
+      x: 0,
+      y: 0,
+      transition: { ...curveTransition, staggerChildren: 0.5 },
+    },
     exit: { opacity: 0, x: 0, y: 100 },
   };
 
@@ -29,7 +34,7 @@ function Layout(props: LayoutProps) {
       <AnimatePresence
         exitBeforeEnter
         presenceAffectsLayout={true}
-        // onExitComplete={() => window.scrollTo(0, 0)}
+        onExitComplete={() => window.scrollTo(0, 0)}
       >
         <main
           className={

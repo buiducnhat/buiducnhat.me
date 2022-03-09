@@ -3,7 +3,7 @@ import React from 'react';
 import { INTRO_TEXT } from '@/configs/constants/intro-text.constant';
 import { MotionDiv } from '@/components/animations';
 import { curveTransition } from '@/components/animations/transitions';
-import { fadeLeftVariants } from '../animations/variants';
+import { fadeLeftVariants } from '@/components/animations/variants';
 
 function IntroText() {
   const { pText1, pText2, pText3 } = INTRO_TEXT;
@@ -14,7 +14,7 @@ function IntroText() {
       animate="animate"
       whileHover={{ scale: 1.05, transition: curveTransition }}
       variants={fadeLeftVariants}
-      custom={0.5}
+      custom={0.25}
       className={
         'flex-column p-5 space-y-4 rounded-xl select-none ' +
         'text-white ' +

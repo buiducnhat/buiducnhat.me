@@ -1,7 +1,7 @@
 import React from 'react';
-import Link from 'next/link';
 
 import { routes } from '@/configs/routes.config';
+import NoScrollLink from '@/components/commons/no-scroll-link';
 
 export interface MobileNavbarProps {
   open: boolean;
@@ -15,7 +15,7 @@ const MobileNavItems: React.FC<MobileNavbarProps> = ({ open }) => {
       }
     >
       {routes.map((route, key) => (
-        <Link key={key} href={route.path}>
+        <NoScrollLink key={key} href={route.path}>
           <a
             className={
               'w-full px-3 py-2 text-center rounded-xl ' +
@@ -28,7 +28,7 @@ const MobileNavItems: React.FC<MobileNavbarProps> = ({ open }) => {
           >
             {route.title}
           </a>
-        </Link>
+        </NoScrollLink>
       ))}
     </div>
   );

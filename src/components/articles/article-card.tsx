@@ -1,10 +1,10 @@
 import React from 'react';
-import Link from 'next/link';
 
 import { Article } from '@/models/article.model';
 import { route } from '@/configs/routes.config';
 import { MotionDiv } from '@/components/animations';
-import { fadeUpVariants } from '../animations/variants';
+import NoScrollLink from '@/components/commons/no-scroll-link';
+import { fadeUpVariants } from '@/components/animations/variants';
 
 interface ArticleCardProps {
   article: Article;
@@ -31,7 +31,11 @@ function ArticleCard({ article, index }: ArticleCardProps) {
           'dark:from-dracula-darker-900 dark:to-dracula-darker-800'
         }
       >
-        <Link passHref href={`${route.articles.path}/${article.slug}`}>
+        <NoScrollLink
+          passHref
+          href={`${route.articles.path}/${article.slug}`}
+          scroll={false}
+        >
           <h2
             className={
               'break-words leading-5 ' +
@@ -43,7 +47,7 @@ function ArticleCard({ article, index }: ArticleCardProps) {
           >
             {article.title}
           </h2>
-        </Link>
+        </NoScrollLink>
 
         <div className="mt-3 flex flex-wrap space-x-3">
           {article.tags.map((tag: string, key: number) => (

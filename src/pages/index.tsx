@@ -1,5 +1,4 @@
 import type { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next';
-import Link from 'next/link';
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
@@ -11,6 +10,7 @@ import ArticleCard from '@/components/articles/article-card';
 import { Article } from '@/models/article.model';
 import { route } from '@/configs/routes.config';
 import PageHeading from '@/components/commons/page-heading';
+import NoScrollLink from '@/components/commons/no-scroll-link';
 
 const HomePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
   articles,
@@ -44,11 +44,11 @@ const HomePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
           </div>
 
           <div className="mt-10 text-center">
-            <Link href={route.articles.path}>
+            <NoScrollLink href={route.articles.path}>
               <a className="text-xl text-dracula-purple hover:text-dracula-purple-600">
                 More articles
               </a>
-            </Link>
+            </NoScrollLink>
           </div>
         </div>
       </div>

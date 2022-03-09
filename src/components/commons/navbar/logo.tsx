@@ -1,12 +1,12 @@
 import React from 'react';
-import Link from 'next/link';
 import Image from 'next/image';
 
 import { route } from '@/configs/routes.config';
+import NoScrollLink from '@/components/commons/no-scroll-link';
 
 function Logo() {
   return (
-    <Link href={route.home.path}>
+    <NoScrollLink href={route.home.path}>
       <a
         className={
           'p-2 rounded-xl ' +
@@ -21,7 +21,7 @@ function Logo() {
           alt="logo"
         />
       </a>
-    </Link>
+    </NoScrollLink>
   );
 }
 

@@ -11,7 +11,7 @@ function Avatar() {
       animate="animate"
       whileHover={{ scale: 1.2, transition: curveTransition }}
       variants={fadeUpVariants}
-      custom={0.5}
+      custom={0.25}
       style={{ backgroundImage: 'url(/assets/images/avatar.jpg)' }}
       className={
         'card-shadow w-32 h-32 bg-cover bg-center rounded-full ' +
