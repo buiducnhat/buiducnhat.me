@@ -1,7 +1,7 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 
 import { INTRO_TEXT } from '@/configs/constants/intro-text.constant';
+import { MotionDiv } from '@/components/animations';
 import { curveTransition } from '@/components/animations/transitions';
 import { fadeLeftVariants } from '../animations/variants';
 
@@ -9,7 +9,7 @@ function IntroText() {
   const { pText1, pText2, pText3 } = INTRO_TEXT;
 
   return (
-    <motion.div
+    <MotionDiv
       initial="initial"
       animate="animate"
       whileHover={{ scale: 1.05, transition: curveTransition }}
@@ -26,7 +26,7 @@ function IntroText() {
       <p className="text-xl md:text-2xl">{pText1}</p>
       <p className="text-lg md:text-xl">{pText2}</p>
       <p className="text-lg md:text-xl">{pText3}</p>
-    </motion.div>
+    </MotionDiv>
   );
 }
 

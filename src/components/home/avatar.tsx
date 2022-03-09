@@ -1,12 +1,12 @@
 import React from 'react';
-import { motion, Variants } from 'framer-motion';
 
 import { curveTransition } from '@/components/animations/transitions';
 import { fadeUpVariants } from '@/components/animations/variants';
+import { MotionDiv } from '@/components/animations';
 
 function Avatar() {
   return (
-    <motion.div
+    <MotionDiv
       initial="initial"
       animate="animate"
       whileHover={{ scale: 1.2, transition: curveTransition }}

@@ -1,32 +1,25 @@
 import React from 'react';
 import Link from 'next/link';
-import { motion, Variants } from 'framer-motion';
 
 import { Article } from '@/models/article.model';
 import { route } from '@/configs/routes.config';
+import { MotionDiv } from '@/components/animations';
+import { fadeUpVariants } from '../animations/variants';
 
-function ArticleCard({ article, index }: { article: Article; index: number }) {
-  const curveAnimation = {
-    type: 'spring',
-    stiffness: 400,
-    damping: 30,
-  };
-  const variants: Variants = {
-    initial: {
-      y: 50,
-    },
-    active: {
-      y: 0,
-      transition: { ...curveAnimation, delay: index / 5 },
-    },
-    hovering: { translateY: '-5%', transition: { ...curveAnimation } },
-  };
+interface ArticleCardProps {
+  article: Article;
+  index?: number;
+}
+
+function ArticleCard({ article, index }: ArticleCardProps) {
+  index = index || 0;
 
   return (
-    <motion.div
-      variants={variants}
+    <MotionDiv
+      variants={{ ...fadeUpVariants, hovering: { translateY: '-5%' } }}
+      custom={index / 5}
       initial="initial"
-      animate="active"
+      animate="animate"
       whileHover="hovering"
       className={'w-full flex rounded-xl overflow-hidden ' + 'card-shadow'}
     >
@@ -92,7 +85,7 @@ function ArticleCard({ article, index }: { article: Article; index: number }) {
         }}
         className="bg-cover invisible md:visible md:w-1/4"
       />
-    </motion.div>
+    </MotionDiv>
   );
 }
 
