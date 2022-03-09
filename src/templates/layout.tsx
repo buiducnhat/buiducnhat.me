@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import { AnimatePresence, motion, Variants } from 'framer-motion';
+import { Variants } from 'framer-motion';
 
 import Navbar from '@/components/commons/navbar';
 import Footer from '@/components/commons/footer';
@@ -31,29 +31,23 @@ function Layout(props: LayoutProps) {
     <>
       <Meta title={title} description={description || ''} />
       <Navbar />
-      <AnimatePresence
-        exitBeforeEnter
-        presenceAffectsLayout={true}
-        onExitComplete={() => window.scrollTo(0, 0)}
+      <main
+        className={
+          'bg-dracula-purple-50 dark:bg-dracula-darker-800 dark:text-dracula-light ' +
+          "min-h-[calc(100vh-theme('spacing.20')-theme('spacing.16'))]"
+        }
       >
-        <main
-          className={
-            'bg-dracula-purple-50 dark:bg-dracula-darker-800 dark:text-dracula-light ' +
-            "min-h-[calc(100vh-theme('spacing.20')-theme('spacing.16'))]"
-          }
+        <MotionDiv
+          initial="hidden"
+          animate="enter"
+          exit="exit"
+          variants={variants}
+          transition={{ type: 'spring', duration: 1 }}
+          className="container-layout py-12"
         >
-          <MotionDiv
-            initial="hidden"
-            animate="enter"
-            exit="exit"
-            variants={variants}
-            transition={{ type: 'spring', duration: 1 }}
-            className="container-layout py-12"
-          >
-            {children}
-          </MotionDiv>
-        </main>
-      </AnimatePresence>
+          {children}
+        </MotionDiv>
+      </main>
       <Footer />
     </>
   );
