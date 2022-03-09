@@ -17,7 +17,7 @@ function ArticleCard({ article, index }: ArticleCardProps) {
   return (
     <MotionDiv
       variants={{ ...fadeUpVariants, hovering: { translateY: '-5%' } }}
-      custom={index / 5}
+      custom={index / 5 + 0.5}
       initial="initial"
       animate="animate"
       whileHover="hovering"

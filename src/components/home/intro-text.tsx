@@ -14,6 +14,7 @@ function IntroText() {
       animate="animate"
       whileHover={{ scale: 1.05, transition: curveTransition }}
       variants={fadeLeftVariants}
+      custom={0.5}
       className={
         'flex-column p-5 space-y-4 rounded-xl select-none ' +
         'text-white ' +
