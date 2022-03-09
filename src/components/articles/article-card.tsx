@@ -1,19 +1,33 @@
 import React from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 
 import { Article } from '@/models/article.model';
 import { route } from '@/configs/routes.config';
 
 function ArticleCard({ article, index }: { article: Article; index: number }) {
+  const curveAnimation = {
+    type: 'spring',
+    stiffness: 400,
+    damping: 30,
+  };
+  const variants: Variants = {
+    initial: {
+      y: 50,
+    },
+    active: {
+      y: 0,
+      transition: { ...curveAnimation, delay: index / 5 },
+    },
+    hovering: { translateY: '-5%', transition: { ...curveAnimation } },
+  };
+
   return (
     <motion.div
-      initial={{ y: 50 }}
-      animate={{
-        y: 0,
-        transition: { type: 'spring', delay: index / 5, duration: 0.6 },
-      }}
-      whileHover={{ y: -10 }}
+      variants={variants}
+      initial="initial"
+      animate="active"
+      whileHover="hovering"
       className={'w-full flex rounded-xl overflow-hidden ' + 'card-shadow'}
     >
       <div

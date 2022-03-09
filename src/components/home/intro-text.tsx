@@ -2,20 +2,18 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 import { INTRO_TEXT } from '@/configs/constants/intro-text.constant';
+import { curveTransition } from '@/components/animations/transitions';
+import { fadeLeftVariants } from '../animations/variants';
 
 function IntroText() {
   const { pText1, pText2, pText3 } = INTRO_TEXT;
 
   return (
     <motion.div
-      initial="hidden"
-      animate="visible"
-      transition={{ type: 'spring', duration: 1 }}
-      whileHover={{ scale: 1.05 }}
-      variants={{
-        hidden: { opacity: 0, x: 50 },
-        visible: { opacity: 1, x: 0 },
-      }}
+      initial="initial"
+      animate="animate"
+      whileHover={{ scale: 1.05, transition: curveTransition }}
+      variants={fadeLeftVariants}
       className={
         'flex-column p-5 space-y-4 rounded-xl select-none ' +
         'text-white ' +
