@@ -4,7 +4,6 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 
-import Meta from '@/templates/meta';
 import Layout from '@/templates/layout';
 import Avatar from '@/components/home/avatar';
 import IntroText from '@/components/home/intro-text';
@@ -17,11 +16,7 @@ const HomePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
   articles,
 }) => {
   return (
-    <Layout
-      meta={
-        <Meta title="Home | Gerpan" description="Gerpan personal website" />
-      }
-    >
+    <Layout title="Home | Gerpan" description="Gerpan personal website">
       <div className="flex-col space-y-10 md:space-y-16">
         <div
           className={

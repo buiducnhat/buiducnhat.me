@@ -12,7 +12,6 @@ import { serialize } from 'next-mdx-remote/serialize';
 import rehypeSlug from 'rehype-slug';
 
 import Layout from '@/templates/layout';
-import Meta from '@/templates/meta';
 import { Article } from '@/models/article.model';
 import MDXRender from '@/components/articles/mdx-render';
 import Toc from '@/components/articles/toc';
@@ -22,7 +21,8 @@ const ArticlePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
 }) => {
   return (
     <Layout
-      meta={<Meta title={article?.title} description={article?.description} />}
+      title={`${article?.title} | Gerpan`}
+      description={article?.description}
     >
       <div className="flex space-x-5">
         <div className="basis-full lg:basis-2/3 flex flex-col space-y-10">

@@ -4,7 +4,6 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 
-import Meta from '@/templates/meta';
 import Layout from '@/templates/layout';
 import ArticleCard from '@/components/articles/article-card';
 import { Article } from '@/models/article.model';
@@ -27,9 +26,8 @@ const ArticlesPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = (
 
   return (
     <Layout
-      meta={
-        <Meta title="Home | Gerpan" description="Gerpan personal website" />
-      }
+      title="Articles | Gerpan"
+      description="Gerpan personal website - Articles"
     >
       <div className="flex flex-col">
         <div className="mb-3 flex flex-wrap space-y-3 sm:space-y-0">
