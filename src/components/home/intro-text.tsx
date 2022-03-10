@@ -24,9 +24,9 @@ function IntroText() {
         'hover:bg-gradient-to-bl dark:hover:bg-gradient-to-bl'
       }
     >
-      <p className="text-xl md:text-2xl">{pText1}</p>
-      <p className="text-lg md:text-xl">{pText2}</p>
-      <p className="text-lg md:text-xl">{pText3}</p>
+      <p className="text-2xl md:text-3xl text-center">{pText1}</p>
+      <p className="text-lg md:text-xl text-center">{pText2}</p>
+      <p className="text-lg md:text-xl text-center">{pText3}</p>
     </MotionDiv>
   );
 }

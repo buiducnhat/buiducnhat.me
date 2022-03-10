@@ -11,6 +11,7 @@ import { Article } from '@/models/article.model';
 import { route } from '@/configs/routes.config';
 import PageHeading from '@/components/commons/page-heading';
 import NoScrollLink from '@/components/commons/no-scroll-link';
+import Socials from '@/components/home/socials';
 
 const HomePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
   articles,
@@ -26,8 +27,9 @@ const HomePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
             'justify-center md:justify-start'
           }
         >
-          <div className="flex-grow-1">
+          <div className="flex-grow-1 flex flex-col space-y-3 items-center">
             <Avatar />
+            <Socials />
           </div>
           <div className="flex-grow-3">
             <IntroText />
