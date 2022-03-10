@@ -1,11 +1,11 @@
 import { ReactNode } from 'react';
-import { Variants } from 'framer-motion';
 
 import Navbar from '@/components/commons/navbar';
 import Footer from '@/components/commons/footer';
-import { MotionDiv } from '@/components/animations';
+import { MotionMain } from '@/components/animations';
 import Meta from './meta';
-import { curveTransition } from '@/components/animations/transitions';
+import { pageTransition } from '@/components/animations/transitions';
+import { pageVariants } from '@/components/animations/variants';
 
 interface LayoutProps {
   title: string;
@@ -16,38 +16,25 @@ interface LayoutProps {
 function Layout(props: LayoutProps) {
   const { title, description, children } = props;
 
-  const variants: Variants = {
-    hidden: { opacity: 1, x: -200, y: 0 },
-    enter: {
-      opacity: 1,
-      x: 0,
-      y: 0,
-      transition: { ...curveTransition, staggerChildren: 0.5 },
-    },
-    exit: { opacity: 0, x: 0, y: 100 },
-  };
-
   return (
     <>
       <Meta title={title} description={description || ''} />
+
       <Navbar />
-      <main
+
+      <MotionMain
+        initial="hidden"
+        animate="enter"
+        exit="exit"
+        variants={pageVariants}
+        transition={pageTransition}
         className={
-          'bg-dracula-purple-50 dark:bg-dracula-darker-800 dark:text-dracula-light ' +
           "min-h-[calc(100vh-theme('spacing.20')-theme('spacing.16'))]"
         }
       >
-        <MotionDiv
-          initial="hidden"
-          animate="enter"
-          exit="exit"
-          variants={variants}
-          transition={{ type: 'spring', duration: 1 }}
-          className="container-layout py-12"
-        >
-          {children}
-        </MotionDiv>
-      </main>
+        <div className="container-layout py-12">{children}</div>
+      </MotionMain>
+
       <Footer />
     </>
   );

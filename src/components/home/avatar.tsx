@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { curveTransition } from '@/components/animations/transitions';
-import { fadeUpVariants } from '@/components/animations/variants';
+import { fadeRightVariants } from '@/components/animations/variants';
 import { MotionDiv } from '@/components/animations';
 
 function Avatar() {
@@ -10,8 +10,8 @@ function Avatar() {
       initial="initial"
       animate="animate"
       whileHover={{ scale: 1.2, transition: curveTransition }}
-      variants={fadeUpVariants}
-      custom={0.25}
+      variants={fadeRightVariants}
+      custom={0.5}
       style={{ backgroundImage: 'url(/assets/images/avatar.jpg)' }}
       className={
         'card-shadow w-32 h-32 bg-cover bg-center rounded-full ' +

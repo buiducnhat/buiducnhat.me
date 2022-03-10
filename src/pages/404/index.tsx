@@ -4,9 +4,9 @@ import { useRouter } from 'next/router';
 import Image from 'next/image';
 
 import Layout from '@/templates/layout';
-import Meta from '@/templates/meta';
-import Button from '@/components/commons/button';
+
 import { route } from '@/configs/routes.config';
+import Button from '@/components/commons/button';
 
 const NotFoundPage: NextPage = () => {
   const router = useRouter();
@@ -17,7 +17,8 @@ const NotFoundPage: NextPage = () => {
 
   return (
     <Layout
-      meta={<Meta title="404 | Not found" description="Page not found" />}
+      title="404 Not found | Gerpan"
+      description="Page not found, please contact admin for more information"
     >
       <div className="flex flex-col items-center space-y-5">
         <Image

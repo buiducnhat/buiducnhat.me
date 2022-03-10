@@ -6,3 +6,8 @@ export const curveTransition: Transition = {
   damping: 30,
   duration: 0.5,
 };
+
+export const pageTransition: Transition = {
+  type: 'linear',
+  duration: 0.5,
+};

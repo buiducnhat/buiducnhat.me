@@ -9,6 +9,8 @@ import {
 
 export const MotionDiv = motion<DivProps>('div');
 
+export const MotionMain = motion<DivProps>('main');
+
 export const MotionButton = motion<ButtonProps>('button');
 
 export const MotionH1 = motion<H1Props>('h1');

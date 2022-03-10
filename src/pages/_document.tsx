@@ -19,7 +19,13 @@ class MyDocument extends Document {
             rel="stylesheet"
           />
         </Head>
-        <body>
+
+        <body
+          className={
+            'bg-dracula-purple-50 dark:bg-dracula-darker-800 ' +
+            'text-dracula-dark dark:text-dracula-light '
+          }
+        >
           <Main />
           <NextScript />
         </body>
