@@ -9,7 +9,7 @@ function Avatar() {
     <MotionDiv
       initial="initial"
       animate="animate"
-      whileHover={{ scale: 1.2, transition: curveTransition }}
+      whileHover={{ scale: 1.1, transition: curveTransition }}
       variants={fadeRightVariants}
       custom={0.5}
       style={{ backgroundImage: 'url(/assets/images/avatar.jpg)' }}
