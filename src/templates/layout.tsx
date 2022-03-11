@@ -1,9 +1,9 @@
 import { ReactNode } from 'react';
 
+import Meta from './meta';
 import Navbar from '@/components/commons/navbar';
 import Footer from '@/components/commons/footer';
 import { MotionMain } from '@/components/animations';
-import Meta from './meta';
 import { pageTransition } from '@/components/animations/transitions';
 import { pageVariants } from '@/components/animations/variants';
 
@@ -28,11 +28,10 @@ function Layout(props: LayoutProps) {
         exit="exit"
         variants={pageVariants}
         transition={pageTransition}
-        className={
-          "min-h-[calc(100vh-theme('spacing.20')-theme('spacing.16'))]"
-        }
+        className="min-h-[calc(100vh-theme('spacing.20')-theme('spacing.16'))]
+          flex-grow container-layout py-12"
       >
-        <div className="container-layout py-12">{children}</div>
+        {children}
       </MotionMain>
 
       <Footer />

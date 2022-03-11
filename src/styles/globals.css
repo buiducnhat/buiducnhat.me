@@ -3,12 +3,21 @@
 @tailwind utilities;
 
 @layer components {
+  #__next {
+    @apply bg-dracula-purple-50
+      dark:bg-dracula-darker-800
+      text-dracula-dark
+      dark:text-dracula-light;
+  }
+
   .container-layout {
     @apply max-w-6xl mx-auto px-4 md:px-8;
   }
 
   .card-shadow {
-    @apply shadow-lg shadow-dracula-purple-200 hover:shadow-2xl hover:shadow-dracula-pink-200
-      dark:shadow-lg dark:shadow-dracula-purple-900 dark:hover:shadow-2xl dark:hover:shadow-dracula-pink-900;
+    @apply shadow-lg shadow-dracula-purple-200
+      hover:shadow-2xl hover:shadow-dracula-pink-200
+      dark:shadow-lg dark:shadow-dracula-purple-900
+      dark:hover:shadow-2xl dark:hover:shadow-dracula-pink-900;
   }
 }

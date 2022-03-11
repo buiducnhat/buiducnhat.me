@@ -20,12 +20,7 @@ class MyDocument extends Document {
           />
         </Head>
 
-        <body
-          className={
-            'bg-dracula-purple-50 dark:bg-dracula-darker-800 ' +
-            'text-dracula-dark dark:text-dracula-light '
-          }
-        >
+        <body>
           <Main />
           <NextScript />
         </body>

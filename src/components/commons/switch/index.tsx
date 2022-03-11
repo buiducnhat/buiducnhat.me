@@ -6,6 +6,7 @@ import styles from './switch.module.css';
 interface SwitchProps extends InputProps {
   id: string;
   checked: boolean;
+  // eslint-disable-next-line no-unused-vars
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
@@ -27,7 +28,7 @@ function Switch({ id, children, checked, onChange, ...rest }: SwitchProps) {
           'bg-gray-100 border-2 border-dracula-purple-100 ' +
           'duration-300'
         }
-      ></div>
+      />
       {children}
     </label>
   );

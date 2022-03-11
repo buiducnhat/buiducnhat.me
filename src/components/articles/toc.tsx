@@ -2,7 +2,6 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 
 import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
-import { useRouter } from 'next/router';
 
 export interface IHeadingTOC {
   id: string;
@@ -51,8 +50,6 @@ const HeadingLink = ({
   id: string;
   isActive: boolean;
 }) => {
-  const router = useRouter();
-
   return (
     <Link href={`#${id}`} passHref scroll={true}>
       <a
