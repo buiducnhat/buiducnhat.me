@@ -20,4 +20,15 @@
       dark:shadow-lg dark:shadow-dracula-purple-900
       dark:hover:shadow-2xl dark:hover:shadow-dracula-pink-900;
   }
+  ::-webkit-scrollbar {
+    @apply w-2;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-dracula-purple-100 dark:bg-dracula-darker-700;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply rounded-xl 
+      bg-dracula-purple-200 dark:bg-dracula-darker-500
+      hover:bg-dracula-purple-300 dark:hover:bg-dracula-darker-400;
+  }
 }
