@@ -58,7 +58,7 @@ const HomePage: NextPage = () => {
         <MotionUl
           transition={{
             ...curveTransition,
-            delayChildren: 0.5,
+            delayChildren: 0.5 + careerData.length * 0.2,
             staggerChildren: 0.2,
           }}
           initial="hidden"
