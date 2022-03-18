@@ -6,7 +6,7 @@ import { metaConfig } from '@/configs/meta.config';
 class MyDocument extends Document {
   render() {
     return (
-      <Html lang={metaConfig.locale} className="scroll-smooth">
+      <Html lang={metaConfig.locale} className="scroll-smooth antialiased">
         <Head>
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link
