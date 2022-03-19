@@ -6,12 +6,12 @@ import matter from 'gray-matter';
 import Layout from '@/templates/layout';
 import Avatar from '@/components/home/avatar';
 import IntroText from '@/components/home/intro-text';
-import ArticleCard from '@/components/articles/article-card';
 import { Article } from '@/models/article.model';
 import { route } from '@/configs/routes.config';
 import PageHeading from '@/components/commons/page-heading';
 import NoScrollLink from '@/components/commons/no-scroll-link';
 import Socials from '@/components/home/socials';
+import ArticleList from '@/components/articles/article-list';
 
 const HomePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
   articles,
@@ -40,9 +40,7 @@ const HomePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
           <PageHeading>Popular articles</PageHeading>
 
           <div className="mt-8 flex flex-col space-y-8">
-            {articles?.slice(0, 3).map((article: any, key: number) => (
-              <ArticleCard key={key} index={key} article={article} />
-            ))}
+            <ArticleList articles={articles?.slice(0, 3)} />
           </div>
 
           <div className="mt-10 text-center">

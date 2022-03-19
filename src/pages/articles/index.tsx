@@ -5,10 +5,10 @@ import path from 'path';
 import matter from 'gray-matter';
 
 import Layout from '@/templates/layout';
-import ArticleCard from '@/components/articles/article-card';
 import { Article } from '@/models/article.model';
 import PageHeading from '@/components/commons/page-heading';
 import SearchArticlesInput from '@/components/articles/search-input';
+import ArticleList from '@/components/articles/article-list';
 
 const ArticlesPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = (
   props
@@ -43,9 +43,7 @@ const ArticlesPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = (
         </div>
 
         <div className="mt-8 flex flex-col space-y-8">
-          {articles?.map((article: any, key: number) => (
-            <ArticleCard key={key} index={key} article={article} />
-          ))}
+          <ArticleList articles={articles} />
         </div>
       </div>
     </Layout>
