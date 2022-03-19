@@ -53,13 +53,13 @@ function TimelineItem({ title, subtitle, time, detail }: TimelineItemProps) {
 
       <time
         className="block mb-2 text-sm leading-none
-          text-dracula-blue-400 dark:text-dracula-blue-500"
+          text-dracula-blue-500 dark:text-dracula-blue-300"
       >
         {time}
       </time>
       <p
         className="mb-4 text-sm md:text-base font-light 
-          text-dracula-dark-500"
+          text-dracula-dark-500 dark:text-dracula-dark-300"
       >
         {detail}
       </p>
