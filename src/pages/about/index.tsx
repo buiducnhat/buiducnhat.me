@@ -1,22 +1,12 @@
 import type { NextPage } from 'next';
-import { H2Props } from 'react-html-props';
 
 import Layout from '@/templates/layout';
 import TimelineItem from '@/components/about/timeline-item';
 import PageHeading from '@/components/commons/page-heading';
+import SubHeading from '@/components/commons/page-heading/sub-heading';
 import { MotionLi, MotionUl } from '@/components/animations';
 import { curveTransition } from '@/components/animations/transitions';
-import { careerData, educationData } from '@/data/about';
-
-const SubHeadingText = ({ children, ...rest }: H2Props) => (
-  <h2
-    className="mb-5 text-xl md:text-2xl font-bold
-      text-dracula-purple-600 dark:text-dracula-purple-300"
-    {...rest}
-  >
-    {children}
-  </h2>
-);
+import { CAREER_DATA, EDUCATION_DATA } from '@/data/about';
 
 const AboutPage: NextPage = () => {
   return (
@@ -24,7 +14,7 @@ const AboutPage: NextPage = () => {
       <PageHeading>About me</PageHeading>
 
       <div className="mt-8">
-        <SubHeadingText>Career</SubHeadingText>
+        <SubHeading>Career</SubHeading>
         <MotionUl
           transition={{
             ...curveTransition,
@@ -37,7 +27,7 @@ const AboutPage: NextPage = () => {
             border-dracula-dark-100
             dark:border-dracula-dark-800"
         >
-          {careerData.map((career, key) => (
+          {CAREER_DATA.map((item, key) => (
             <MotionLi
               key={key}
               variants={{
@@ -46,16 +36,16 @@ const AboutPage: NextPage = () => {
               }}
               className="mb-10 ml-6"
             >
-              <TimelineItem {...career} />
+              <TimelineItem {...item} />
             </MotionLi>
           ))}
         </MotionUl>
 
-        <SubHeadingText>Education</SubHeadingText>
+        <SubHeading>Education</SubHeading>
         <MotionUl
           transition={{
             ...curveTransition,
-            delayChildren: 0.5 + careerData.length * 0.2,
+            delayChildren: 0.5 + CAREER_DATA.length * 0.2,
             staggerChildren: 0.2,
           }}
           initial="hidden"
@@ -64,7 +54,7 @@ const AboutPage: NextPage = () => {
             border-dracula-dark-100
             dark:border-dracula-dark-800"
         >
-          {educationData.map((career, key) => (
+          {EDUCATION_DATA.map((item, key) => (
             <MotionLi
               key={key}
               variants={{
@@ -73,7 +63,7 @@ const AboutPage: NextPage = () => {
               }}
               className="mb-10 ml-6"
             >
-              <TimelineItem {...career} />
+              <TimelineItem {...item} />
             </MotionLi>
           ))}
         </MotionUl>
