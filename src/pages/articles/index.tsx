@@ -26,8 +26,8 @@ const ArticlesPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = (
 
   return (
     <Layout
-      title="Articles | Gerpan"
-      description="Gerpan personal website - Articles"
+      title="Articles | Bùi Đức Nhật"
+      description="Bùi Đức Nhật personal website - blog"
     >
       <div className="flex flex-col">
         <div className="mb-3 flex flex-wrap space-y-3 sm:space-y-0">

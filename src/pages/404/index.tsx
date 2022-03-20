@@ -17,7 +17,7 @@ const NotFoundPage: NextPage = () => {
 
   return (
     <Layout
-      title="404 Not found | Gerpan"
+      title="404 Not found | Bùi Đức Nhật"
       description="Page not found, please contact admin for more information"
     >
       <div className="flex flex-col items-center space-y-5">

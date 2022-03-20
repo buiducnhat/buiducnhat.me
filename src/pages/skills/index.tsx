@@ -10,7 +10,10 @@ import SubHeading from '@/components/commons/page-heading/sub-heading';
 
 const SkillsPage: NextPage = () => {
   return (
-    <Layout title="Skills | Gerpan" description="Gerpan personal website">
+    <Layout
+      title="Skills | Bùi Đức Nhật"
+      description="Bùi Đức Nhật skills page"
+    >
       <PageHeading>My skills</PageHeading>
 
       <div className="mt-8 flex flex-col space-y-12">

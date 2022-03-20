@@ -10,7 +10,7 @@ import { CAREER_DATA, EDUCATION_DATA } from '@/data/about';
 
 const AboutPage: NextPage = () => {
   return (
-    <Layout title="About | Gerpan" description="Gerpan personal website">
+    <Layout title="About | Bùi Đức Nhật" description="Bùi Đức Nhật information">
       <PageHeading>About me</PageHeading>
 
       <div className="mt-8">

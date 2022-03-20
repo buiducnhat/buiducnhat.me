@@ -21,7 +21,7 @@ const ArticlePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
 }) => {
   return (
     <Layout
-      title={`${article?.title} | Gerpan`}
+      title={`${article?.title} | Bùi Đức Nhật`}
       description={article?.description}
     >
       <div className="flex space-x-5">

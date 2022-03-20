@@ -17,7 +17,7 @@ const HomePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
   articles,
 }) => {
   return (
-    <Layout title="Home | Gerpan" description="Gerpan personal website">
+    <Layout title="Home | Bùi Đức Nhật" description="Bùi Đức Nhật home page">
       <div className="flex-col space-y-10 md:space-y-16">
         <div
           className={

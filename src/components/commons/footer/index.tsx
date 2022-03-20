@@ -11,7 +11,7 @@ function Footer() {
     <footer className="w-full bg-dracula-purple-50 dark:bg-dracula-darker-800">
       <div className="container-layout min-h-[theme('spacing.20')] flex items-center">
         <span className="text-sm sm:text-base text-dracula-purple font-bold">
-          © 2022 Gerpan
+          © 2022 Bùi Đức Nhật
         </span>
 
         <div className="flex ml-auto space-x-4 text-xl sm:text-2xl">
