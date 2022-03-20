@@ -8,7 +8,6 @@ import { motion } from 'framer-motion';
 
 import { fadeRightVariants } from '@/components/animations/variants';
 import { curveTransition } from '@/components/animations/transitions';
-import NoScrollLink from '@/components/commons/no-scroll-link';
 
 const socialsData = [
   {
@@ -32,18 +31,18 @@ function Socials() {
       text-dracula-purple-400 dark:text-dracula-purple"
     >
       {socialsData.map((socialData, key) => (
-        <NoScrollLink key={key} href={socialData.link} passHref>
-          <motion.a
-            initial="initial"
-            animate="animate"
-            whileHover={{ scale: 1.2, transition: { ...curveTransition } }}
-            variants={fadeRightVariants}
-            custom={1 - key / 5}
-            target="_blank"
-          >
-            {socialData.icon}
-          </motion.a>
-        </NoScrollLink>
+        <motion.a
+          key={key}
+          target="_blank"
+          href={socialData.link}
+          initial="initial"
+          animate="animate"
+          whileHover={{ scale: 1.2, transition: { ...curveTransition } }}
+          variants={fadeRightVariants}
+          custom={1 - key / 5}
+        >
+          {socialData.icon}
+        </motion.a>
       ))}
     </div>
   );

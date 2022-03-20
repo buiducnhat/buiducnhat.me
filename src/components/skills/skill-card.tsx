@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import { ThemeContext } from '@/features/theme/theme.context';
 import { usePalette } from 'react-palette';
-import NextLink from 'next/link';
 
 interface SkillCardProps {
   title: string;
@@ -15,7 +14,7 @@ function SkillCard({ title, description, url, imgUrl }: SkillCardProps) {
   const [theme] = useContext(ThemeContext);
 
   return (
-    <NextLink href={url} passHref>
+    <a href={url} target="_blank" rel="noreferrer">
       <div
         className="p-5 flex space-x-4
           rounded-xl
@@ -54,7 +53,7 @@ function SkillCard({ title, description, url, imgUrl }: SkillCardProps) {
           <p className="text-sm">{description}</p>
         </div>
       </div>
-    </NextLink>
+    </a>
   );
 }
 

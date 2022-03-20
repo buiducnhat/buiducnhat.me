@@ -5,7 +5,6 @@ import {
   FaLinkedin as LinkedinIcon,
   FaEnvelope as EmailIcon,
 } from 'react-icons/fa';
-import NoScrollLink from '@/components/commons/no-scroll-link';
 
 function Footer() {
   return (
@@ -16,38 +15,38 @@ function Footer() {
         </span>
 
         <div className="flex ml-auto space-x-4 text-xl sm:text-2xl">
-          <NoScrollLink href="https://github.com/gerpann">
-            <a
-              target="_blank"
-              className="text-slate-900 dark:text-white hover:scale-110 duration-200"
-            >
-              <GithubIcon />
-            </a>
-          </NoScrollLink>
-          <NoScrollLink href="https://facebook.com/gerpan.4701">
-            <a
-              target="_blank"
-              className="text-sky-500 bg-white rounded-full hover:scale-110 duration-200"
-            >
-              <FacebookIcon />
-            </a>
-          </NoScrollLink>
-          <NoScrollLink href="https://linkedin.com/in/nhat-bui-a97373158">
-            <a
-              target="_blank"
-              className="text-sky-600 bg-white hover:scale-110 duration-200"
-            >
-              <LinkedinIcon />
-            </a>
-          </NoScrollLink>
-          <NoScrollLink href="mail:nhaths4701@gmail.com">
-            <a
-              target="_blank"
-              className="text-dracula-blue dark:text-dracula-light hover:scale-110 duration-200"
-            >
-              <EmailIcon />
-            </a>
-          </NoScrollLink>
+          <a
+            target="_blank"
+            href="https://github.com/gerpann"
+            className="text-slate-900 dark:text-white hover:scale-110 duration-200"
+            rel="noreferrer"
+          >
+            <GithubIcon />
+          </a>
+          <a
+            target="_blank"
+            href="https://facebook.com/gerpan.4701"
+            className="text-sky-500 bg-white rounded-full hover:scale-110 duration-200"
+            rel="noreferrer"
+          >
+            <FacebookIcon />
+          </a>
+          <a
+            target="_blank"
+            href="https://linkedin.com/in/nhat-bui-a97373158"
+            className="text-sky-600 bg-white hover:scale-110 duration-200"
+            rel="noreferrer"
+          >
+            <LinkedinIcon />
+          </a>
+          <a
+            target="_blank"
+            href="mail:nhaths4701@gmail.com"
+            className="text-dracula-blue dark:text-dracula-light hover:scale-110 duration-200"
+            rel="noreferrer"
+          >
+            <EmailIcon />
+          </a>
         </div>
       </div>
     </footer>

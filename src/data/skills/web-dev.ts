@@ -8,7 +8,7 @@ export const WEB_DEV_SKILLS = [
   },
   {
     title: 'Typescript',
-    description: 'Extend programming language of Javascript',
+    description: 'Extended syntax for Javascript',
     url: 'https://www.typescriptlang.org',
     imgUrl:
       'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',
@@ -36,28 +36,28 @@ export const WEB_DEV_SKILLS = [
   },
   {
     title: 'React JS',
-    description: 'Javascript library for building user interfaces',
+    description: 'JS lib for building user interfaces',
     url: 'https://reactjs.org/',
     imgUrl:
       'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
   },
   {
     title: 'React Native',
-    description: 'Javascript library for building cross platform mobile app',
+    description: 'JS lib for building cross platform mobile app',
     url: 'https://reactnative.dev/',
     imgUrl:
       'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
   },
   {
     title: 'MySQL',
-    description: 'A RDBMS (Relational Database Management System)',
+    description: 'An open source RDBMS',
     url: 'https://www.mysql.com/',
     imgUrl:
       'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg',
   },
   {
     title: 'MongoDB',
-    description: 'A NoSQL database',
+    description: 'As a NoSQL database program',
     url: 'https://www.mongodb.com/',
     imgUrl:
       'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg',
