@@ -63,6 +63,13 @@ export const WEB_APP_SKILLS = [
       'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
   },
   {
+    title: 'Redux',
+    description: 'JS lib for managing state',
+    url: 'https://redux.js.org/',
+    imgUrl:
+      'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg',
+  },
+  {
     title: 'Next.js',
     description: 'JS lib for building user interfaces',
     url: 'https://nextjs.org/',
