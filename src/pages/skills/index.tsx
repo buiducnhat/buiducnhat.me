@@ -19,8 +19,9 @@ const SkillsPage: NextPage = () => {
           <MotionDiv
             transition={{
               ...curveTransition,
-              delayChildren: 0.5,
-              staggerChildren: 0.2,
+              delayChildren:
+                0.5 + (index ? SKILLS_DATA[index - 1].data.length * 0.05 : 0),
+              staggerChildren: 0.05,
             }}
             initial="hidden"
             animate="show"
