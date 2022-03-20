@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { INTRO_TEXT } from '@/configs/constants/intro-text.constant';
+import { INTRO_TEXT } from '@/data/home';
 import { MotionDiv } from '@/components/animations';
 import { curveTransition } from '@/components/animations/transitions';
 import { fadeLeftVariants } from '@/components/animations/variants';
