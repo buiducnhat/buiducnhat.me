@@ -28,6 +28,7 @@ function SkillCard({ title, description, url, imgUrl }: SkillCardProps) {
           className="relative 
             rounded-xl
             min-w-[theme('spacing.16')] p-2
+            bg-dracula-light
             overflow-hidden"
         >
           <div
@@ -39,7 +40,10 @@ function SkillCard({ title, description, url, imgUrl }: SkillCardProps) {
                   : background.darkVibrant,
             }}
           />
-          <img className="w-12 h-12" src={imgUrl} alt={`${title} logo`} />
+          {
+            // eslint-disable-next-line @next/next/no-img-element
+            <img className="w-12 h-12" src={imgUrl} alt={`${title} logo`} />
+          }
         </div>
 
         <div className="flex flex-col">

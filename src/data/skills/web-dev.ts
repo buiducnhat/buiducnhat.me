@@ -1,24 +1,24 @@
-export const WEB_DEV_SKILLS = [
-  {
-    title: 'Javascript',
-    description: 'Programming language',
-    url: 'https://www.javascript.com',
-    imgUrl:
-      'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
-  },
-  {
-    title: 'Typescript',
-    description: 'Extended syntax for Javascript',
-    url: 'https://www.typescriptlang.org',
-    imgUrl:
-      'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',
-  },
+export const WEB_APP_SKILLS = [
   {
     title: 'Node.js®',
     description: 'JavaScript runtime',
     url: 'https://nodejs.org',
     imgUrl:
       'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg',
+  },
+  {
+    title: 'Express',
+    description: 'Web framework for Node.js',
+    url: 'https://expressjs.com',
+    imgUrl:
+      'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg',
+  },
+  {
+    title: 'NestJS',
+    description: 'Web framework for Node.js',
+    url: 'https://nestjs.com',
+    imgUrl:
+      'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-plain.svg',
   },
   {
     title: 'HTML',
@@ -35,11 +35,39 @@ export const WEB_DEV_SKILLS = [
       'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg',
   },
   {
+    title: 'Bootstrap',
+    description: 'CSS framework',
+    url: 'https://getbootstrap.com',
+    imgUrl:
+      'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg',
+  },
+  {
+    title: 'Material UI',
+    description: 'React UI library',
+    url: 'https://material-ui.com',
+    imgUrl:
+      'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg',
+  },
+  {
+    title: 'Tailwind CSS',
+    description: 'CSS framework for rapidly building stylesheets',
+    url: 'https://tailwindcss.com',
+    imgUrl:
+      'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg',
+  },
+  {
     title: 'React JS',
     description: 'JS lib for building user interfaces',
     url: 'https://reactjs.org/',
     imgUrl:
       'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
+  },
+  {
+    title: 'Next.js',
+    description: 'JS lib for building user interfaces',
+    url: 'https://nextjs.org/',
+    imgUrl:
+      'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg',
   },
   {
     title: 'React Native',
@@ -49,17 +77,17 @@ export const WEB_DEV_SKILLS = [
       'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
   },
   {
-    title: 'MySQL',
-    description: 'An open source RDBMS',
-    url: 'https://www.mysql.com/',
+    title: 'REST API',
+    description: 'Web service for exchanging data',
+    url: 'https://en.wikipedia.org/wiki/REST_API',
     imgUrl:
-      'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg',
+      'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ie10/ie10-original.svg',
   },
   {
-    title: 'MongoDB',
-    description: 'As a NoSQL database program',
-    url: 'https://www.mongodb.com/',
+    title: 'GraphQL',
+    description: 'A query language for APIs',
+    url: 'https://graphql.org/',
     imgUrl:
-      'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg',
+      'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg',
   },
 ];
