@@ -4,9 +4,12 @@ import { INTRO_TEXT } from '@/data/home';
 import { MotionDiv } from '@/components/animations';
 import { curveTransition } from '@/components/animations/transitions';
 import { fadeLeftVariants } from '@/components/animations/variants';
+import useTrans from '@/hooks/useTrans';
 
 function IntroText() {
   const { pText1, pText2, pText3 } = INTRO_TEXT;
+
+  const t = useTrans();
 
   return (
     <MotionDiv
@@ -24,9 +27,9 @@ function IntroText() {
         'hover:bg-gradient-to-bl dark:hover:bg-gradient-to-bl'
       }
     >
-      <p className="text-2xl md:text-3xl text-center">{pText1}</p>
-      <p className="text-lg md:text-xl text-center">{pText2}</p>
-      <p className="text-lg md:text-xl text-center">{pText3}</p>
+      <p className="text-2xl md:text-3xl text-center">{t.home.hello}</p>
+      <p className="text-lg md:text-xl text-center">{t.home.intro1}</p>
+      <p className="text-lg md:text-xl text-center">{t.home.intro2}</p>
     </MotionDiv>
   );
 }
