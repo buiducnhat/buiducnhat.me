@@ -1,14 +1,11 @@
 import React from 'react';
 
-import { INTRO_TEXT } from '@/data/home';
 import { MotionDiv } from '@/components/animations';
 import { curveTransition } from '@/components/animations/transitions';
 import { fadeLeftVariants } from '@/components/animations/variants';
 import useTrans from '@/hooks/useTrans';
 
 function IntroText() {
-  const { pText1, pText2, pText3 } = INTRO_TEXT;
-
   const t = useTrans();
 
   return (
