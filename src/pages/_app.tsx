@@ -11,6 +11,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider>
       <AnimatePresence
+        initial={false}
         exitBeforeEnter
         presenceAffectsLayout={true}
         onExitComplete={() => window.scrollTo(0, 0)}
