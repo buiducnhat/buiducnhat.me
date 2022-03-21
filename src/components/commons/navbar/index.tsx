@@ -5,6 +5,7 @@ import MobileNavItems from './mobile-nav-items';
 import SwitchThemeModeButton from '@/components/commons/switch-theme-mode';
 import MobileMenuButton from './mobile-menu-button';
 import Logo from './logo';
+import ChangeLanguageBtn from './change-language';
 
 const Navbar = () => {
   const [openMobileNav, setOpenMobileNav] = useState(false);
@@ -29,7 +30,8 @@ const Navbar = () => {
 
         <NavItems />
 
-        <div className="ml-auto">
+        <div className="ml-auto flex space-x-2">
+          <ChangeLanguageBtn />
           <SwitchThemeModeButton />
         </div>
 

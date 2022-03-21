@@ -7,7 +7,7 @@ export const metaConfig = {
   image: 'https://buiducnhat.me/images/logo.png',
   url: 'https://buiducnhat.me/',
   type: 'website',
-  locale: 'vi-VN, en-US',
+  locale: '',
   facebook: 'https://facebook.com/gerpan.4701',
   github: 'https://github.com/gerpann',
 };
