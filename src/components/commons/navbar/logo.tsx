@@ -10,8 +10,12 @@ function Logo() {
       <a
         className="p-2 rounded-xl
           h-10 w-10 sm:h-12 sm:w-12
-          hover:shadow-xl hover:bg-gradient-to-tr
-          hover:from-dracula-purple-200 hover:to-dracula-pink-200"
+          bg-gradient-to-tr
+          from-dracula-purple-50 to-dracula-pink-50
+          dark:from-dracula-purple-100 dark:to-dracula-pink-100
+          hover:shadow-xl
+          hover:from-dracula-purple-100 hover:to-dracula-pink-100
+          dark:hover:from-dracula-purple-200 dark:hover:to-dracula-pink-200"
       >
         <Image
           src="/assets/images/logo.svg"
