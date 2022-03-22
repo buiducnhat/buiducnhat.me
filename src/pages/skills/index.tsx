@@ -8,24 +8,30 @@ import { SKILLS_DATA } from '@/data/skills';
 import SkillCard from '@/components/skills/skill-card';
 import SubHeading from '@/components/commons/page-heading/sub-heading';
 import { MY_NAME } from '@/configs/constants/common.constant';
+import useTrans from '@/hooks/useTrans';
 
 const SkillsPage: NextPage = () => {
+  const i18n = useTrans();
+
   return (
     <Layout
-      title={`Skills | ${MY_NAME}`}
-      description="Bùi Đức Nhật skills page"
+      title={`${i18n.skill.title} | ${MY_NAME}`}
+      description={i18n.skill.description}
     >
-      <PageHeading>My skills</PageHeading>
+      <PageHeading>{i18n.skill.heading}</PageHeading>
 
       <div className="mt-8 flex flex-col space-y-12">
-        {SKILLS_DATA.map((skill, index) => (
+        {i18n.skill.skillData.map((skill, index) => (
           <div key={index}>
             <SubHeading>{skill.title}</SubHeading>
             <MotionDiv
               transition={{
                 ...curveTransition,
                 delayChildren:
-                  0.5 + (index ? SKILLS_DATA[index - 1].data.length * 0.05 : 0),
+                  0.5 +
+                  (index
+                    ? i18n.skill.skillData[index - 1].data.length * 0.05
+                    : 0),
                 staggerChildren: 0.05,
               }}
               initial="hidden"

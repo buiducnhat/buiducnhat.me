@@ -1,4 +1,5 @@
 import { CAREER_DATA, EDUCATION_DATA } from '@/data/about';
+import { SKILLS_DATA } from '@/data/skills';
 
 const vi = {
   navbar: {
@@ -24,6 +25,12 @@ const vi = {
     title: 'Bài viết',
     description: 'Bài viết của Bùi Đức Nhật, lập trình, dev, tutorials, ...',
     heading: 'Bài viết của tôi',
+  },
+  skill: {
+    title: 'Kỹ năng',
+    heading: 'Kỹ năng',
+    description: 'Kỹ năng và kiến thức',
+    skillData: SKILLS_DATA.vi,
   },
   about: {
     title: 'Về tác giả',
