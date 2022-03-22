@@ -5,12 +5,16 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { useRouter } from 'next/router';
 import { useDetectClickOutside } from 'react-detect-click-outside';
 
+import useTrans from '@/hooks/useTrans';
+
 const languages = [
   { label: '🇬🇧 English', value: 'en' },
   { label: '🇻🇳 Tiếng Việt', value: 'vi' },
 ];
 
 function ChangeLanguageBtn() {
+  const i18n = useTrans();
+
   const router = useRouter();
   const { pathname, asPath, query } = router;
 
@@ -21,7 +25,7 @@ function ChangeLanguageBtn() {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="relative w-36" ref={dropdownRef}>
+    <div className="relative w-30 lg:w-32" ref={dropdownRef}>
       <motion.button
         className="font-bold rounded-t-xl w-full
           hover:bg-dracula-purple-100 hover:dark:bg-dracula-darker-700
@@ -31,7 +35,7 @@ function ChangeLanguageBtn() {
           dark:text-dracula-purple-300"
         onClick={() => setOpen(!open)}
       >
-        Language
+        {i18n.navbar.language}
         <svg
           className="ml-2 w-4 h-4"
           fill="none"
@@ -55,19 +59,19 @@ function ChangeLanguageBtn() {
             initial="initial"
             animate="animate"
             exit="exit"
-            className="absolute top-12 right-0
-              z-10 w-36
+            className="absolute top-12 right-0 overflow-hidden
+              z-10 w-30 lg:w-32
               text-base list-none
               rounded-b-xl shadow-lg
               divide-y divide-gray-100
               bg-dracula-purple-50 dark:bg-dracula-darker-800"
           >
-            <ul className="py-1" aria-labelledby="dropdownButton">
+            <ul>
               {languages.map((lang, index) => (
                 <li
                   key={index}
                   className="block py-2 px-4 text-sm
-                      cursor-pointer
+                    cursor-pointer
                     text-dracula-dark dark:text-dracula-light
                     hover:bg-dracula-purple-100 dark:hover:bg-dracula-darker-600"
                   onClick={() =>

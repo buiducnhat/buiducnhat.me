@@ -1,4 +1,12 @@
 const vi = {
+  navbar: {
+    home: 'Trang chủ',
+    article: 'Bài viết',
+    project: 'Dự án',
+    skills: 'Kỹ năng',
+    about: 'Giới thiệu',
+    language: 'Ngôn ngữ',
+  },
   home: {
     hello: 'Hello, mình là Nhật 👋',
     intro1: 'Mình là một đang và yêu thích lập trình đến từ Việt Nam 🇻🇳🇻🇳🇻🇳.',

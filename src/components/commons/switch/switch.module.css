@@ -1,7 +1,8 @@
 .toggleBg:after {
   content: '';
   @apply absolute top-0.5 left-0.5 bg-white border border-gray-300
-    rounded-full h-5 w-5 transition shadow-sm;
+    rounded-full transition shadow-sm
+    h-4 w-4 lg:h-5 lg:w-5;
 }
 
 input:checked + .toggleBg:after {

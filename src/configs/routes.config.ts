@@ -1,9 +1,14 @@
 export const route = {
-  home: { path: '/', title: 'Home' },
-  articles: { path: '/articles', title: 'Article' },
-  projects: { path: '/projects', title: 'Project' },
-  skills: { path: '/skills', title: 'Skills' },
-  about: { path: '/about', title: 'About' },
+  home: { path: '/', title: 'home' },
+  articles: { path: '/articles', title: 'article' },
+  projects: { path: '/projects', title: 'project' },
+  skills: { path: '/skills', title: 'skills' },
+  about: { path: '/about', title: 'about' },
 };
 
-export const routes = Object.values(route);
+type RouteTitle = 'home' | 'article' | 'project' | 'skills' | 'about';
+
+export const routes = Object.values(route) as Array<{
+  path: string;
+  title: RouteTitle;
+}>;

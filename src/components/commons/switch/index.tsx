@@ -22,12 +22,10 @@ function Switch({ id, children, checked, onChange, ...rest }: SwitchProps) {
         {...rest}
       />
       <div
-        className={
-          `${styles.toggleBg} ` +
-          'h-6 w-11 rounded-full ' +
-          'bg-gray-100 border-2 border-dracula-purple-100 ' +
-          'duration-300'
-        }
+        className={`${styles.toggleBg}
+          h-5 w-9 lg:h-6 lg:w-11 rounded-full
+          bg-gray-100 border-2 border-dracula-purple-100
+          duration-300`}
       />
       {children}
     </label>

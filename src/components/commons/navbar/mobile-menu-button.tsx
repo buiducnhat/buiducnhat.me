@@ -8,7 +8,7 @@ function MobileMenuButton({ onClick }: MobileMenuButtonProps) {
   return (
     <button
       className={
-        'md:hidden inline-flex p-3 ml-auto rounded-xl ' +
+        'md:hidden inline-flex p-2 ml-auto rounded-xl ' +
         'text-white hover:text-dracula-purple outline-none ' +
         'focus:bg-dracula-purple-100 dark:focus:bg-slate-900'
       }

@@ -1,4 +1,12 @@
 const en = {
+  navbar: {
+    home: 'Home',
+    article: 'Article',
+    project: 'Project',
+    skills: 'Skills',
+    about: 'About me',
+    language: 'Language',
+  },
   home: {
     hello: "Hello, I'm Nhat 👋",
     intro1:
