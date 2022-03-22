@@ -15,13 +15,14 @@ import Layout from '@/templates/layout';
 import { Article } from '@/models/article.model';
 import MDXRender from '@/components/articles/mdx-render';
 import Toc from '@/components/articles/toc';
+import { MY_NAME } from '@/configs/constants/common.constant';
 
 const ArticlePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
   article,
 }) => {
   return (
     <Layout
-      title={`${article?.title} | Bùi Đức Nhật`}
+      title={`${article?.title} | ${MY_NAME}`}
       description={article?.description}
     >
       <div className="flex space-x-5">

@@ -7,10 +7,11 @@ import SubHeading from '@/components/commons/page-heading/sub-heading';
 import { MotionLi, MotionUl } from '@/components/animations';
 import { curveTransition } from '@/components/animations/transitions';
 import { CAREER_DATA, EDUCATION_DATA } from '@/data/about';
+import { MY_NAME } from '@/configs/constants/common.constant';
 
 const AboutPage: NextPage = () => {
   return (
-    <Layout title="About | Bùi Đức Nhật" description="Bùi Đức Nhật information">
+    <Layout title={`About | ${MY_NAME}`} description="Bùi Đức Nhật information">
       <PageHeading>About me</PageHeading>
 
       <div className="mt-8">

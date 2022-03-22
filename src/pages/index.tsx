@@ -12,12 +12,13 @@ import PageHeading from '@/components/commons/page-heading';
 import NoScrollLink from '@/components/commons/no-scroll-link';
 import Socials from '@/components/home/socials';
 import ArticleList from '@/components/articles/article-list';
+import { MY_NAME } from '@/configs/constants/common.constant';
 
 const HomePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
   articles,
 }) => {
   return (
-    <Layout title="Home | Bùi Đức Nhật" description="Bùi Đức Nhật home page">
+    <Layout title={`Home | ${MY_NAME}`} description="Bùi Đức Nhật home page">
       <div className="flex-col space-y-10 md:space-y-16">
         <div
           className={

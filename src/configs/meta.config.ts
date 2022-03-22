@@ -1,11 +1,13 @@
+import { MY_NAME, URL } from './constants/common.constant';
+
 export const metaConfig = {
-  site_name: 'Bùi Đức Nhật',
-  title: 'Bùi Đức Nhật - Developer',
-  description: 'Bùi Đức Nhật personal website ',
+  site_name: MY_NAME,
+  title: `${MY_NAME} - Fullstack Developer`,
+  description: `${MY_NAME} personal website`,
   keywords:
     'Bùi Đức Nhật, buiducnhat, nhatbuiduc.com, nhatbuiduc, website, blog, dev',
-  image: 'https://buiducnhat.me/images/logo.png',
-  url: 'https://buiducnhat.me/',
+  image: `${URL}/images/logo.png`,
+  url: URL,
   type: 'website',
   locale: '',
   facebook: 'https://facebook.com/gerpan.4701',

@@ -7,11 +7,12 @@ import { curveTransition } from '@/components/animations/transitions';
 import { SKILLS_DATA } from '@/data/skills';
 import SkillCard from '@/components/skills/skill-card';
 import SubHeading from '@/components/commons/page-heading/sub-heading';
+import { MY_NAME } from '@/configs/constants/common.constant';
 
 const SkillsPage: NextPage = () => {
   return (
     <Layout
-      title="Skills | Bùi Đức Nhật"
+      title={`Skills | ${MY_NAME}`}
       description="Bùi Đức Nhật skills page"
     >
       <PageHeading>My skills</PageHeading>
