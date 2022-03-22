@@ -21,7 +21,10 @@ const HomePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
   const i18n = useTrans();
 
   return (
-    <Layout title={`Home | ${MY_NAME}`} description="Bùi Đức Nhật home page">
+    <Layout
+      title={`${i18n.home.title} | ${MY_NAME}`}
+      description="Bùi Đức Nhật home page"
+    >
       <div className="flex-col space-y-10 md:space-y-16">
         <div
           className={

@@ -8,6 +8,9 @@ const en = {
     language: 'Language',
   },
   home: {
+    title: 'Home',
+    description:
+      "Bùi Đức Nhật's personal website, contains knowledge, experience and projects for developers",
     hello: "Hello, I'm Nhat 👋",
     intro1:
       'I am a Software developer and an open source lover from Vietnam 🇻🇳🇻🇳🇻🇳.',
@@ -15,6 +18,12 @@ const en = {
       "This is my portfolio, where I write about the things I'm working on and share my experience.",
     popularArticles: 'Popular Articles',
     moreArticles: 'More Articles',
+  },
+  article: {
+    title: 'Articles',
+    description:
+      'Articles of Bùi Đức Nhật, developer articles, tutorials, etc.',
+    heading: 'My articles',
   },
 };
 
