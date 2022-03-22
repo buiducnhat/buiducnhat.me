@@ -1,3 +1,5 @@
+import { CAREER_DATA, EDUCATION_DATA } from '@/data/about';
+
 const en = {
   navbar: {
     home: 'Home',
@@ -22,7 +24,7 @@ const en = {
   article: {
     title: 'Articles',
     description:
-    'Articles of Bùi Đức Nhật, developer articles, tutorials, etc.',
+      'Articles of Bùi Đức Nhật, developer articles, tutorials, etc.',
     heading: 'My articles',
   },
   about: {
@@ -31,6 +33,8 @@ const en = {
     description: 'About Bùi Đức Nhật, contact, careers, education,...',
     career: 'Career',
     education: 'Education',
+    careerData: CAREER_DATA.en,
+    educationData: EDUCATION_DATA.en,
   },
 };
 

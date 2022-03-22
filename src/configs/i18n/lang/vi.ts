@@ -1,3 +1,5 @@
+import { CAREER_DATA, EDUCATION_DATA } from '@/data/about';
+
 const vi = {
   navbar: {
     home: 'Trang chủ',
@@ -30,6 +32,8 @@ const vi = {
       'Giới thiệu về Bùi Đức Nhật, thông tin liên hệ, nghề nghiệp, học vấn,...',
     career: 'Công việc',
     education: 'Học vấn',
+    careerData: CAREER_DATA.vi,
+    educationData: EDUCATION_DATA.vi,
   },
 };
 

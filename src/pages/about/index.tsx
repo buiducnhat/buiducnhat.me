@@ -6,7 +6,6 @@ import PageHeading from '@/components/commons/page-heading';
 import SubHeading from '@/components/commons/page-heading/sub-heading';
 import { MotionLi, MotionUl } from '@/components/animations';
 import { curveTransition } from '@/components/animations/transitions';
-import { CAREER_DATA, EDUCATION_DATA } from '@/data/about';
 import { MY_NAME } from '@/configs/constants/common.constant';
 import useTrans from '@/hooks/useTrans';
 
@@ -34,7 +33,7 @@ const AboutPage: NextPage = () => {
             border-dracula-dark-100
             dark:border-dracula-dark-800"
         >
-          {CAREER_DATA.map((item, key) => (
+          {i18n.about.careerData.map((item, key) => (
             <MotionLi
               key={key}
               variants={{
@@ -52,7 +51,7 @@ const AboutPage: NextPage = () => {
         <MotionUl
           transition={{
             ...curveTransition,
-            delayChildren: 0.5 + CAREER_DATA.length * 0.2,
+            delayChildren: 0.5 + i18n.about.careerData.length * 0.2,
             staggerChildren: 0.2,
           }}
           initial="hidden"
@@ -61,7 +60,7 @@ const AboutPage: NextPage = () => {
             border-dracula-dark-100
             dark:border-dracula-dark-800"
         >
-          {EDUCATION_DATA.map((item, key) => (
+          {i18n.about.educationData.map((item, key) => (
             <MotionLi
               key={key}
               variants={{
