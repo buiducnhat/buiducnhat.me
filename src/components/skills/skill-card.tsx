@@ -1,6 +1,8 @@
 import React, { useContext } from 'react';
-import { ThemeContext } from '@/features/theme/theme.context';
 import { usePalette } from 'react-palette';
+
+import { ThemeContext } from '@/features/theme/theme.context';
+import Image from 'next/image';
 
 interface SkillCardProps {
   title: string;
@@ -11,6 +13,7 @@ interface SkillCardProps {
 
 function SkillCard({ title, description, url, imgUrl }: SkillCardProps) {
   const { data: background } = usePalette(imgUrl);
+
   const [theme] = useContext(ThemeContext);
 
   return (
@@ -25,7 +28,8 @@ function SkillCard({ title, description, url, imgUrl }: SkillCardProps) {
           card-shadow"
       >
         <div
-          className="relative 
+          className="flex items-center justify-center
+            relative 
             rounded-xl
             min-w-[theme('spacing.16')] p-2
             bg-dracula-light
@@ -40,10 +44,7 @@ function SkillCard({ title, description, url, imgUrl }: SkillCardProps) {
                   : background.darkVibrant,
             }}
           />
-          {
-            // eslint-disable-next-line @next/next/no-img-element
-            <img className="w-12 h-12" src={imgUrl} alt={`${title} logo`} />
-          }
+          <Image src={imgUrl} alt={`${title} logo`} width={48} height={48} />
         </div>
 
         <div className="flex flex-col">
