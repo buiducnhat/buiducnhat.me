@@ -8,6 +8,5 @@ export const curveTransition: Transition = {
 };
 
 export const pageTransition: Transition = {
-  type: 'linear',
-  duration: 0.5,
+  type: 'spring',
 };
