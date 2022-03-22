@@ -8,14 +8,20 @@ import { MotionLi, MotionUl } from '@/components/animations';
 import { curveTransition } from '@/components/animations/transitions';
 import { CAREER_DATA, EDUCATION_DATA } from '@/data/about';
 import { MY_NAME } from '@/configs/constants/common.constant';
+import useTrans from '@/hooks/useTrans';
 
 const AboutPage: NextPage = () => {
+  const i18n = useTrans();
+
   return (
-    <Layout title={`About | ${MY_NAME}`} description="Bùi Đức Nhật information">
-      <PageHeading>About me</PageHeading>
+    <Layout
+      title={`${i18n.about.title} | ${MY_NAME}`}
+      description={i18n.about.description}
+    >
+      <PageHeading>{i18n.about.heading}</PageHeading>
 
       <div className="mt-8">
-        <SubHeading>Career</SubHeading>
+        <SubHeading>{i18n.about.career}</SubHeading>
         <MotionUl
           transition={{
             ...curveTransition,
@@ -42,7 +48,7 @@ const AboutPage: NextPage = () => {
           ))}
         </MotionUl>
 
-        <SubHeading>Education</SubHeading>
+        <SubHeading>{i18n.about.education}</SubHeading>
         <MotionUl
           transition={{
             ...curveTransition,

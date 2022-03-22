@@ -22,8 +22,15 @@ const en = {
   article: {
     title: 'Articles',
     description:
-      'Articles of Bùi Đức Nhật, developer articles, tutorials, etc.',
+    'Articles of Bùi Đức Nhật, developer articles, tutorials, etc.',
     heading: 'My articles',
+  },
+  about: {
+    title: 'About me',
+    heading: 'About me',
+    description: 'About Bùi Đức Nhật, contact, careers, education,...',
+    career: 'Career',
+    education: 'Education',
   },
 };
 

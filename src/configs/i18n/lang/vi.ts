@@ -23,6 +23,14 @@ const vi = {
     description: 'Bài viết của Bùi Đức Nhật, lập trình, dev, tutorials, ...',
     heading: 'Bài viết của tôi',
   },
+  about: {
+    title: 'Về tác giả',
+    heading: 'Về tác giả',
+    description:
+      'Giới thiệu về Bùi Đức Nhật, thông tin liên hệ, nghề nghiệp, học vấn,...',
+    career: 'Công việc',
+    education: 'Học vấn',
+  },
 };
 
 export default vi;
