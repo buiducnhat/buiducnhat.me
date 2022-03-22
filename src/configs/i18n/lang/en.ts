@@ -4,7 +4,7 @@ const en = {
     article: 'Article',
     project: 'Project',
     skills: 'Skills',
-    about: 'About me',
+    about: 'About',
     language: 'Language',
   },
   home: {
@@ -13,6 +13,8 @@ const en = {
       'I am a Software developer and an open source lover from Vietnam 🇻🇳🇻🇳🇻🇳.',
     intro2:
       "This is my portfolio, where I write about the things I'm working on and share my experience.",
+    popularArticles: 'Popular Articles',
+    moreArticles: 'More Articles',
   },
 };
 

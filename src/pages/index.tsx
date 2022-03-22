@@ -13,10 +13,13 @@ import NoScrollLink from '@/components/commons/no-scroll-link';
 import Socials from '@/components/home/socials';
 import ArticleList from '@/components/articles/article-list';
 import { MY_NAME } from '@/configs/constants/common.constant';
+import useTrans from '@/hooks/useTrans';
 
 const HomePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
   articles,
 }) => {
+  const i18n = useTrans();
+
   return (
     <Layout title={`Home | ${MY_NAME}`} description="Bùi Đức Nhật home page">
       <div className="flex-col space-y-10 md:space-y-16">
@@ -38,7 +41,7 @@ const HomePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
         </div>
 
         <div>
-          <PageHeading>Popular articles</PageHeading>
+          <PageHeading>{i18n.home.popularArticles}</PageHeading>
 
           <div className="mt-8 flex flex-col space-y-8">
             <ArticleList articles={articles?.slice(0, 3)} />
@@ -46,8 +49,12 @@ const HomePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
 
           <div className="mt-10 text-center">
             <NoScrollLink href={route.articles.path}>
-              <a className="text-xl text-dracula-purple hover:text-dracula-purple-600">
-                More articles
+              <a
+                className="text-xl duration-200
+                  hover:font-bold
+                  text-dracula-purple hover:text-dracula-pink"
+              >
+                {i18n.home.moreArticles}
               </a>
             </NoScrollLink>
           </div>
