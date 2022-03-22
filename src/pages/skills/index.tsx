@@ -4,7 +4,6 @@ import Layout from '@/templates/layout';
 import PageHeading from '@/components/commons/page-heading';
 import { MotionDiv } from '@/components/animations';
 import { curveTransition } from '@/components/animations/transitions';
-import { SKILLS_DATA } from '@/data/skills';
 import SkillCard from '@/components/skills/skill-card';
 import SubHeading from '@/components/commons/page-heading/sub-heading';
 import { MY_NAME } from '@/configs/constants/common.constant';
