@@ -44,15 +44,24 @@ const ArticlePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const files = fs.readdirSync(path.join('src/data/articles'));
-  const paths = files.map((filename) => ({
-    params: {
-      slug: filename.replace('.mdx', ''),
-    },
-  }));
+  const paths = [
+    ...files.map((filename) => ({
+      params: {
+        slug: filename.replace('.mdx', ''),
+        locale: 'en',
+      },
+    })),
+    ...files.map((filename) => ({
+      params: {
+        slug: filename.replace('.mdx', ''),
+        locale: 'vi',
+      },
+    })),
+  ];
 
   return {
     paths,
-    fallback: false,
+    fallback: true,
   };
 };
 
