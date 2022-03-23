@@ -25,7 +25,7 @@ function MDXRender({ article }: MDXRenderProps) {
         prose-code:before:content-[''] prose-code:after:content-['']"
     >
       <MDXRemote
-        {...article.content}
+        {...article?.content}
         components={{
           pre: (props: any) => {
             const code = props?.children?.props as React.DetailedHTMLProps<

@@ -39,14 +39,14 @@ const ArticlePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
               overflow-hidden"
             style={{
               backgroundImage: `url(${
-                article.thumbnailUrl || '/images/placeholder.png'
+                article?.thumbnailUrl || '/images/placeholder.png'
               })`,
             }}
           >
             {
               // eslint-disable-next-line @next/next/no-img-element
               <img
-                src={article.thumbnailUrl || '/images/placeholder.png'}
+                src={article?.thumbnailUrl || '/images/placeholder.png'}
                 alt="background"
                 className="w-full h-full
                   bg-no-repeat backdrop-blur object-contain"
@@ -83,7 +83,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   return {
     paths,
-    fallback: 'blocking',
+    fallback: false,
   };
 };
 
