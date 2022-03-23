@@ -11,19 +11,17 @@ interface MDXRenderProps {
 function MDXRender({ article }: MDXRenderProps) {
   return (
     <article
-      className={
-        'prose max-w-none prose-slate dark:prose-invert ' +
-        'prose-headings:text-dracula-purple-600 dark:prose-headings:text-dracula-purple ' +
-        'prose-a:text-dracula-pink dark:prose-a:text-dracula-pink ' +
-        'prose-a:no-underline prose-a:duration-200 ' +
-        'hover:prose-a:text-dracula-pink-500 dark:hover:prose-a:text-dracula-pink-500 ' +
-        'prose-li:marker:text-dracula-dark-500 ' +
-        'prose-pre:rounded-xl ' +
-        'prose-img:rounded-xl ' +
-        'prose-h2:scroll-mt-20 ' +
-        'prose-h3:scroll-mt-20 ' +
-        "prose-code:before:content-[''] prose-code:after:content-['']"
-      }
+      className="prose max-w-none prose-slate dark:prose-invert
+        prose-headings:text-dracula-purple-600 dark:prose-headings:text-dracula-purple
+        prose-a:text-dracula-pink dark:prose-a:text-dracula-pink
+        prose-a:no-underline prose-a:duration-200
+        hover:prose-a:text-dracula-pink-500 dark:hover:prose-a:text-dracula-pink-500
+        prose-li:marker:text-dracula-dark-500
+        prose-pre:rounded-xl
+        prose-img:rounded-xl
+        prose-h2:scroll-mt-20
+        prose-h3:scroll-mt-20
+        prose-code:before:content-[''] prose-code:after:content-['']"
     >
       <MDXRemote
         {...article.content}

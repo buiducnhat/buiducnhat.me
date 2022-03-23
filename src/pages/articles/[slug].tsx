@@ -26,11 +26,32 @@ const ArticlePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
       description={article?.description}
     >
       <div className="flex space-x-5">
-        <div className="basis-full lg:basis-2/3 flex flex-col space-y-10">
+        <div
+          className="basis-full lg:basis-2/3
+            px-3 pb-3 rounded-xl
+            flex flex-col space-y-10
+            shadow-lg dark:shadow-dracula-darker"
+        >
           <div
-            className="h-56 rounded-xl bg-cover bg-center"
-            style={{ backgroundImage: `url(${article.thumbnailUrl})` }}
-          />
+            className="h-56 max-w-full -mx-3 rounded-t-xl
+              bg-cover bg-center bg-no-repeat
+              overflow-hidden"
+            style={{
+              backgroundImage: `url(${
+                article.thumbnailUrl || '/images/placeholder.png'
+              })`,
+            }}
+          >
+            {
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                src={article.thumbnailUrl || '/images/placeholder.png'}
+                alt="background"
+                className="w-full h-full
+                bg-no-repeat backdrop-blur object-contain"
+              />
+            }
+          </div>
           <MDXRender article={article} />
         </div>
 
@@ -44,6 +65,7 @@ const ArticlePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const files = fs.readdirSync(path.join('src/data/articles'));
+  console.log(files);
   const paths = [
     ...files.map((filename) => ({
       params: {

@@ -10,7 +10,7 @@ import { MY_NAME } from '@/configs/constants/common.constant';
 
 function Footer() {
   return (
-    <footer className="w-full bg-dracula-purple-50 dark:bg-dracula-darker-800">
+    <footer className="w-full">
       <div className="container-layout min-h-[theme('spacing.20')] flex items-center">
         <span className="text-sm sm:text-base text-dracula-purple font-bold">
           © 2022 {MY_NAME}
