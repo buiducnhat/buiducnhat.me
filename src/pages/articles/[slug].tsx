@@ -28,12 +28,12 @@ const ArticlePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
       <div className="flex space-x-5">
         <div
           className="basis-full lg:basis-2/3
-            px-3 pb-3 rounded-xl
-            flex flex-col space-y-10
+            rounded-xl
+            flex flex-col items-center space-y-10
             shadow-lg dark:shadow-dracula-darker"
         >
           <div
-            className="h-56 max-w-full -mx-3 rounded-t-xl
+            className="h-56 w-full rounded-t-xl
               bg-cover bg-center bg-no-repeat
               overflow-hidden"
             style={{
@@ -48,7 +48,7 @@ const ArticlePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
                 src={article.thumbnailUrl || '/images/placeholder.png'}
                 alt="background"
                 className="w-full h-full
-                bg-no-repeat backdrop-blur object-contain"
+                  bg-no-repeat backdrop-blur object-contain"
               />
             }
           </div>
@@ -65,7 +65,6 @@ const ArticlePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const files = fs.readdirSync(path.join('src/data/articles'));
-  console.log(files);
   const paths = [
     ...files.map((filename) => ({
       params: {
@@ -83,7 +82,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   return {
     paths,
-    fallback: true,
+    fallback: 'blocking',
   };
 };
 

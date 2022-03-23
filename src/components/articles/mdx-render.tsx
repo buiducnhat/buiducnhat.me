@@ -11,7 +11,8 @@ interface MDXRenderProps {
 function MDXRender({ article }: MDXRenderProps) {
   return (
     <article
-      className="prose max-w-none prose-slate dark:prose-invert
+      className="prose max-w-none p-3 pb-5 pt-0
+        prose-slate dark:prose-invert
         prose-headings:text-dracula-purple-600 dark:prose-headings:text-dracula-purple
         prose-a:text-dracula-pink dark:prose-a:text-dracula-pink
         prose-a:no-underline prose-a:duration-200
