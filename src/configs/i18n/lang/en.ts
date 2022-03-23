@@ -43,6 +43,11 @@ const en = {
     careerData: CAREER_DATA.en,
     educationData: EDUCATION_DATA.en,
   },
+  404: {
+    title: '404 Not Found',
+    description: 'The page you are looking for was not found.',
+    backHome: 'Back to home',
+  },
 };
 
 export default en;

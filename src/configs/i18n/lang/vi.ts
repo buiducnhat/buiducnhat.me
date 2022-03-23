@@ -42,6 +42,11 @@ const vi = {
     careerData: CAREER_DATA.vi,
     educationData: EDUCATION_DATA.vi,
   },
+  404: {
+    title: '404 Không tìm thấy',
+    description: 'Trang bạn tìm kiếm không tồn tại.',
+    backHome: 'Quay lại',
+  },
 };
 
 export default vi;

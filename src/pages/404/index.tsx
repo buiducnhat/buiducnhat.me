@@ -4,12 +4,15 @@ import { useRouter } from 'next/router';
 import Image from 'next/image';
 
 import Layout from '@/templates/layout';
-
 import { route } from '@/configs/routes.config';
 import Button from '@/components/commons/button';
+import useTrans from '@/hooks/useTrans';
+import { MY_NAME } from '@/configs/constants/common.constant';
 
 const NotFoundPage: NextPage = () => {
   const router = useRouter();
+
+  const i18n = useTrans();
 
   const handleBackButton = () => {
     router.push(route.home.path);
@@ -17,8 +20,8 @@ const NotFoundPage: NextPage = () => {
 
   return (
     <Layout
-      title="404 Not found | Bùi Đức Nhật"
-      description="Page not found, please contact admin for more information"
+      title={`${i18n[404].title} | ${MY_NAME}`}
+      description={i18n[404].description}
     >
       <div className="flex flex-col items-center space-y-5">
         <Image
@@ -28,7 +31,7 @@ const NotFoundPage: NextPage = () => {
           alt="not found image"
         />
 
-        <Button onClick={handleBackButton}>Go back home</Button>
+        <Button onClick={handleBackButton}>{i18n[404].backHome}</Button>
       </div>
     </Layout>
   );
