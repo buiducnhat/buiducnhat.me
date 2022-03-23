@@ -10,6 +10,7 @@ import path from 'path';
 import matter from 'gray-matter';
 import { serialize } from 'next-mdx-remote/serialize';
 import rehypeSlug from 'rehype-slug';
+import remarkGfm from 'remark-gfm';
 
 import Layout from '@/templates/layout';
 import { Article } from '@/models/article.model';
@@ -97,6 +98,7 @@ export const getStaticProps: GetStaticProps<{
   const { data: frontMatter, content } = matter(markdownWithMeta);
   const mdxSource = await serialize(content, {
     mdxOptions: {
+      remarkPlugins: [remarkGfm],
       rehypePlugins: [rehypeSlug],
     },
   });
