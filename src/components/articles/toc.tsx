@@ -74,12 +74,10 @@ export default function Toc() {
 
   return (
     <div
-      className={
-        'rounded-xl w-full p-5 sticky top-28 ' +
-        'bg-dracula-purple-50 dark:bg-dracula-darker-700 ' +
-        'shadow-lg ' +
-        'marker:text-dracula-dark-500'
-      }
+      className="rounded-xl w-full p-5 sticky top-28
+        bg-dracula-light dark:bg-dracula-darker-700
+        shadow-lg 
+        marker:text-dracula-dark-500"
     >
       <ul className="list-disc list-inside">
         {nestedHeadings.map((h2Heading) => (
