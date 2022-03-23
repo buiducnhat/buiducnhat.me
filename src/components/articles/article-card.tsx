@@ -68,12 +68,22 @@ function ArticleCard({ article }: ArticleCardProps) {
 
       <div
         style={{
-          backgroundImage: `url(${
+          background: `url(${
             article.thumbnailUrl || '/images/placeholder.png'
           })`,
         }}
-        className="bg-cover invisible md:visible md:w-1/4"
-      />
+        className="hidden md:block md:w-1/4"
+      >
+        {
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            src={article.thumbnailUrl || '/images/placeholder.png'}
+            alt="background"
+            className="w-full h-full
+              bg-no-repeat backdrop-blur object-contain"
+          />
+        }
+      </div>
     </>
   );
 }

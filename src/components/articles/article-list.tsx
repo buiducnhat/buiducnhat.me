@@ -21,7 +21,7 @@ function ArticleList({ articles }: ArticleListProps) {
             initial="initial"
             animate="animate"
             whileHover="hovering"
-            className="w-full flex rounded-xl overflow-hidden card-shadow"
+            className="w-full h-48 flex rounded-xl overflow-hidden card-shadow"
           >
             <ArticleCard article={article} />
           </MotionDiv>
