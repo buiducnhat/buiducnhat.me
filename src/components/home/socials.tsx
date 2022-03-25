@@ -11,11 +11,11 @@ import { curveTransition } from '@/components/animations/transitions';
 
 const socialsData = [
   {
-    link: 'https://github.com/gerpann',
+    link: 'https://github.com/buiducnhat',
     icon: <GithubIcon />,
   },
   {
-    link: 'https://facebook.com/gerpan.4701',
+    link: 'https://www.facebook.com/gerpan.4701/',
     icon: <FacebookIcon />,
   },
   {
@@ -28,7 +28,7 @@ function Socials() {
   return (
     <div
       className="flex space-x-4 text-xl sm:text-2xl 
-      text-dracula-purple-400 dark:text-dracula-purple"
+        text-dracula-purple-400 dark:text-dracula-purple"
     >
       {socialsData.map((socialData, key) => (
         <motion.a

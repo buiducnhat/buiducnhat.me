@@ -27,7 +27,7 @@ function Footer() {
           </a>
           <a
             target="_blank"
-            href="https://facebook.com/gerpan.4701"
+            href="https://www.facebook.com/gerpan.4701/"
             className="text-sky-500 bg-white rounded-full hover:scale-110 duration-200"
             rel="noreferrer"
           >

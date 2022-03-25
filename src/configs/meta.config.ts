@@ -11,6 +11,6 @@ export const metaConfig = {
   url: URL,
   type: 'website',
   locale: '',
-  facebook: 'https://facebook.com/gerpan.4701',
-  github: 'https://github.com/gerpann',
+  facebook: 'https://www.facebook.com/gerpan.4701/',
+  github: 'https://github.com/buiducnhat',
 };
