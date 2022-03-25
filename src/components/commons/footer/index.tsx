@@ -19,7 +19,7 @@ function Footer() {
         <div className="flex ml-auto space-x-4 text-xl sm:text-2xl">
           <a
             target="_blank"
-            href="https://github.com/gerpann"
+            href="https://github.com/buiducnhat"
             className="text-slate-900 dark:text-white hover:scale-110 duration-200"
             rel="noreferrer"
           >
