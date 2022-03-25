@@ -11,7 +11,7 @@ const en = {
     language: 'Language',
   },
   home: {
-    title: 'Home',
+    title: 'Home page | Bùi Đức Nhật website | Developer',
     description:
       "Bùi Đức Nhật's personal website, contains knowledge, experience and projects for developers",
     hello: "Hello, I'm Nhat 👋",
@@ -23,19 +23,19 @@ const en = {
     moreArticles: 'More Articles',
   },
   article: {
-    title: 'Articles',
+    title: 'Articles page | Bùi Đức Nhật website | Developer',
     description:
       'Articles of Bùi Đức Nhật, developer articles, tutorials, etc.',
     heading: 'My articles',
   },
   skill: {
-    title: 'Skills',
+    title: 'Skills page | Bùi Đức Nhật website | Developer',
     heading: 'My skills',
     description: 'My skills and knowledge',
     skillData: SKILLS_DATA.en,
   },
   about: {
-    title: 'About me',
+    title: 'About me | Bùi Đức Nhật website | Developer',
     heading: 'About me',
     description: 'About Bùi Đức Nhật, contact, careers, education,...',
     career: 'Career',
@@ -44,7 +44,7 @@ const en = {
     educationData: EDUCATION_DATA.en,
   },
   404: {
-    title: '404 Not Found',
+    title: '404 Not Found | Bùi Đức Nhật website | Developer',
     description: 'The page you are looking for was not found.',
     backHome: 'Back to home',
   },

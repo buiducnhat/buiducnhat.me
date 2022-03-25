@@ -12,7 +12,6 @@ import PageHeading from '@/components/commons/page-heading';
 import NoScrollLink from '@/components/commons/no-scroll-link';
 import Socials from '@/components/home/socials';
 import ArticleList from '@/components/articles/article-list';
-import { MY_NAME } from '@/configs/constants/common.constant';
 import useTrans from '@/hooks/useTrans';
 
 const HomePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
@@ -21,10 +20,7 @@ const HomePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
   const i18n = useTrans();
 
   return (
-    <Layout
-      title={`${i18n.home.title} | ${MY_NAME}`}
-      description={i18n.home.description}
-    >
+    <Layout title={i18n.home.title} description={i18n.home.description}>
       <div className="flex-col space-y-10 md:space-y-16">
         <div
           className="flex flex-wrap md:flex-nowrap

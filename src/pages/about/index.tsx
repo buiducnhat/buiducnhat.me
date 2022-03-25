@@ -6,17 +6,13 @@ import PageHeading from '@/components/commons/page-heading';
 import SubHeading from '@/components/commons/page-heading/sub-heading';
 import { MotionLi, MotionUl } from '@/components/animations';
 import { curveTransition } from '@/components/animations/transitions';
-import { MY_NAME } from '@/configs/constants/common.constant';
 import useTrans from '@/hooks/useTrans';
 
 const AboutPage: NextPage = () => {
   const i18n = useTrans();
 
   return (
-    <Layout
-      title={`${i18n.about.title} | ${MY_NAME}`}
-      description={i18n.about.description}
-    >
+    <Layout title={i18n.about.title} description={i18n.about.description}>
       <PageHeading>{i18n.about.heading}</PageHeading>
 
       <div className="mt-8">

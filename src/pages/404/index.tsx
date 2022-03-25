@@ -7,7 +7,6 @@ import Layout from '@/templates/layout';
 import { route } from '@/configs/routes.config';
 import Button from '@/components/commons/button';
 import useTrans from '@/hooks/useTrans';
-import { MY_NAME } from '@/configs/constants/common.constant';
 
 const NotFoundPage: NextPage = () => {
   const router = useRouter();
@@ -19,10 +18,7 @@ const NotFoundPage: NextPage = () => {
   };
 
   return (
-    <Layout
-      title={`${i18n[404].title} | ${MY_NAME}`}
-      description={i18n[404].description}
-    >
+    <Layout title={i18n[404].title} description={i18n[404].description}>
       <div className="flex flex-col items-center space-y-5">
         <Image
           src="/assets/images/not-found.svg"

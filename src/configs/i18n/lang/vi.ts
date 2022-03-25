@@ -11,7 +11,7 @@ const vi = {
     language: 'Ngôn ngữ',
   },
   home: {
-    title: 'Trang chủ',
+    title: 'Trang chủ | Bùi Đức Nhật website | Developer',
     description:
       'Trang cá nhân của Bùi Đức Nhật, chia sẻ kiến thức, kinh nghiệm và dự án mở',
     hello: 'Hello, mình là Nhật 👋',
@@ -22,18 +22,18 @@ const vi = {
     moreArticles: 'Xem thêm',
   },
   article: {
-    title: 'Bài viết',
+    title: 'Bài viết | Bùi Đức Nhật website | Developer',
     description: 'Bài viết của Bùi Đức Nhật, lập trình, dev, tutorials, ...',
     heading: 'Bài viết của tôi',
   },
   skill: {
-    title: 'Kỹ năng',
+    title: 'Kỹ năng | Bùi Đức Nhật website | Developer',
     heading: 'Kỹ năng',
     description: 'Kỹ năng và kiến thức',
     skillData: SKILLS_DATA.vi,
   },
   about: {
-    title: 'Về tác giả',
+    title: 'Về tác giả | Bùi Đức Nhật website | Developer',
     heading: 'Về tác giả',
     description:
       'Giới thiệu về Bùi Đức Nhật, thông tin liên hệ, nghề nghiệp, học vấn,...',
@@ -43,7 +43,7 @@ const vi = {
     educationData: EDUCATION_DATA.vi,
   },
   404: {
-    title: '404 Không tìm thấy',
+    title: '404 Trang không tìm thấy | Bùi Đức Nhật website | Developer',
     description: 'Trang bạn tìm kiếm không tồn tại.',
     backHome: 'Quay lại',
   },

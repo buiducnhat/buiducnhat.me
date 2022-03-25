@@ -10,7 +10,6 @@ import PageHeading from '@/components/commons/page-heading';
 import SearchArticlesInput from '@/components/articles/search-input';
 import ArticleList from '@/components/articles/article-list';
 import useTrans from '@/hooks/useTrans';
-import { MY_NAME } from '@/configs/constants/common.constant';
 
 const ArticlesPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = (
   props
@@ -29,10 +28,7 @@ const ArticlesPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = (
   }, [props.articles, searchInput]);
 
   return (
-    <Layout
-      title={`${i18n.article.title} | ${MY_NAME}`}
-      description="Bùi Đức Nhật personal website - blog"
-    >
+    <Layout title={i18n.article.title} description={i18n.article.description}>
       <div className="flex flex-col">
         <div className="mb-3 flex flex-wrap space-y-3 sm:space-y-0">
           <div className="basis-full sm:basis-1/3">

@@ -6,17 +6,13 @@ import { MotionDiv } from '@/components/animations';
 import { curveTransition } from '@/components/animations/transitions';
 import SkillCard from '@/components/skills/skill-card';
 import SubHeading from '@/components/commons/page-heading/sub-heading';
-import { MY_NAME } from '@/configs/constants/common.constant';
 import useTrans from '@/hooks/useTrans';
 
 const SkillsPage: NextPage = () => {
   const i18n = useTrans();
 
   return (
-    <Layout
-      title={`${i18n.skill.title} | ${MY_NAME}`}
-      description={i18n.skill.description}
-    >
+    <Layout title={i18n.skill.title} description={i18n.skill.description}>
       <PageHeading>{i18n.skill.heading}</PageHeading>
 
       <div className="mt-8 flex flex-col space-y-12">
