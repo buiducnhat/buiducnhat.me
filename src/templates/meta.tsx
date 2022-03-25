@@ -6,9 +6,7 @@ import { metaConfig } from '@/configs/meta.config';
 
 interface MetaProps {
   title: string;
-  keywords?: string;
   description: string;
-  canonical?: string;
 }
 
 const Meta = (props: MetaProps) => {
@@ -56,11 +54,11 @@ const Meta = (props: MetaProps) => {
       <NextSeo
         title={props.title}
         description={props.description}
-        canonical={props.canonical}
+        canonical={metaConfig.canonical}
         openGraph={{
           title: props.title,
           description: props.description,
-          url: props.canonical,
+          url: metaConfig.canonical,
           locale: metaConfig.locale,
           site_name: metaConfig.site_name,
         }}
