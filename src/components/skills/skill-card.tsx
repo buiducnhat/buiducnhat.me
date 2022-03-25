@@ -50,8 +50,8 @@ function SkillCard({ title, description, url, imgUrl }: SkillCardProps) {
         <div className="flex flex-col">
           <h3
             className="text-base
-            font-bold 
-          text-dracula-pink"
+              font-bold 
+              text-dracula-pink"
           >
             {title}
           </h3>

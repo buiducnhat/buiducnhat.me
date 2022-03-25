@@ -46,7 +46,7 @@ const ArticlesPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = (
           </div>
         </div>
 
-        <div className="mt-8 flex flex-col space-y-8">
+        <div className="mt-8">
           <ArticleList articles={articles} />
         </div>
       </div>

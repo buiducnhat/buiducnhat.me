@@ -23,16 +23,13 @@ const HomePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
   return (
     <Layout
       title={`${i18n.home.title} | ${MY_NAME}`}
-      description="Bùi Đức Nhật home page"
+      description={i18n.home.description}
     >
       <div className="flex-col space-y-10 md:space-y-16">
         <div
-          className={
-            'flex flex-wrap md:flex-nowrap ' +
-            'items-center ' +
-            'space-y-5 md:space-y-0 md:space-x-20 ' +
-            'justify-center md:justify-start'
-          }
+          className="flex flex-wrap md:flex-nowrap
+            space-y-5 md:space-y-0 md:space-x-20
+            items-center justify-center md:justify-start"
         >
           <div className="flex-grow-1 flex flex-col space-y-3 items-center">
             <Avatar />
@@ -46,7 +43,7 @@ const HomePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
         <div>
           <PageHeading>{i18n.home.popularArticles}</PageHeading>
 
-          <div className="mt-8 flex flex-col space-y-8">
+          <div className="mt-8">
             <ArticleList articles={articles?.slice(0, 3)} />
           </div>
 

@@ -5,7 +5,7 @@ export const metaConfig = {
   title: `${MY_NAME} - Fullstack Developer`,
   description: `${MY_NAME} personal website`,
   keywords:
-    'Bùi Đức Nhật, buiducnhat, nhatbuiduc.com, nhatbuiduc, website, blog, dev',
+    'Bùi Đức Nhật, buiducnhat, nhatbuiduc.com, nhatbuiduc, website, blog, dev, web, app',
   image: `${URL}/images/logo.png`,
   url: URL,
   type: 'website',

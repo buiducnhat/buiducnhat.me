@@ -6,6 +6,7 @@ import { metaConfig } from '@/configs/meta.config';
 
 interface MetaProps {
   title: string;
+  keywords?: string;
   description: string;
   canonical?: string;
 }
@@ -26,6 +27,7 @@ const Meta = (props: MetaProps) => {
           httpEquiv="Cache-Control"
           content="max-age=31536000, must-revalidate"
         />
+        <meta name="keywords" content={metaConfig.keywords} />
         <link
           rel="apple-touch-icon"
           href={`${router.basePath}/apple-touch-icon.png`}
