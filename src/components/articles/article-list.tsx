@@ -2,9 +2,8 @@ import React from 'react';
 
 import { Article } from '@/models/article.model';
 import { MotionDiv } from '@/components/animations';
-import { fadeUpVariants } from '@/components/animations/variants';
 import ArticleCard from '@/components/articles/article-card';
-import { curveTransition } from '../animations/transitions';
+import { curveTransition } from '@/components/animations/transitions';
 
 interface ArticleListProps {
   articles: Article[];
