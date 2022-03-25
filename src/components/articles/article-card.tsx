@@ -1,4 +1,5 @@
 import React from 'react';
+import { format } from 'date-fns';
 
 import { Article } from '@/models/article.model';
 import { route } from '@/configs/routes.config';
@@ -61,7 +62,7 @@ function ArticleCard({ article }: ArticleCardProps) {
             className="text-sm md:text-base
               text-dracula-blue-400 dark:text-dracula-blue-500"
           >
-            {article.date}
+            {format(new Date(article.date), 'yyyy MMM, dd')}
           </span>
         </div>
       </div>

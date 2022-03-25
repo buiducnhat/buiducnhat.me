@@ -57,6 +57,8 @@ start you sentence with special emoji character, either :a: (`:a:` - assertion) 
 
 To specify test parameter, use the `$` character, following by parameter name (w/o spaces). Parameter can be embedded into _Test Case_ description and steps. The parameter scope is defined by _Test Case_, i.e. it's vissible only within same _Test Case_ where it's defined.
 
+### This is H3 Heading
+
 To specify list of possible values, we recommend to use tables embedded into _Test Case_, where each column represents a paramater and row is used to specify iterations and parameter values that are used in each iteration.
 
 | Syntax    | Description |
@@ -84,14 +86,14 @@ Test Runner allows reporting error by pressing **e** characted during step run.
 
 This test case contains a shell script. The shell script can be defined at test case level or at step level
 
-```
+```bash
 ls -a
 echo pwd
 ```
 
 - Step with code
 
-  ```
+  ```bash
   uname -a
   echo "done"
   ```

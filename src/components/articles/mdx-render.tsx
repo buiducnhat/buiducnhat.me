@@ -3,6 +3,7 @@ import { MDXRemote } from 'next-mdx-remote';
 
 import CodeHighlighter from '@/components/articles/code-highlighter';
 import { Article } from '@/models/article.model';
+import { PreProps } from 'react-html-props';
 
 interface MDXRenderProps {
   article: Article;
@@ -27,11 +28,8 @@ function MDXRender({ article }: MDXRenderProps) {
       <MDXRemote
         {...article?.content}
         components={{
-          pre: (props: any) => {
-            const code = props?.children?.props as React.DetailedHTMLProps<
-              React.HTMLAttributes<HTMLPreElement>,
-              HTMLPreElement
-            >;
+          pre: (props: PreProps & { children: { props: PreProps } }) => {
+            const code = props?.children?.props as PreProps;
             const { className, children, ...rest } = code;
             const match = /language-(\w+)/.exec(className || '');
 
@@ -43,6 +41,19 @@ function MDXRender({ article }: MDXRenderProps) {
                   {children}
                 </code>
               </pre>
+            );
+          },
+          code: ({ className, children, ...rest }) => {
+            return (
+              <code
+                className={
+                  className +
+                  ' text-dracula-orange-600 dark:text-dracula-orange-300'
+                }
+                {...rest}
+              >
+                {children}
+              </code>
             );
           },
         }}
