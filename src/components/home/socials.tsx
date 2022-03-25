@@ -34,6 +34,7 @@ function Socials() {
         <motion.a
           key={key}
           target="_blank"
+          rel="noreferrer"
           href={socialData.link}
           initial="initial"
           animate="animate"
