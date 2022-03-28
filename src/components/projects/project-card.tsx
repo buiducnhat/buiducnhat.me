@@ -1,4 +1,7 @@
+import { motion } from 'framer-motion';
 import React from 'react';
+import { MotionDiv } from '../animations';
+import { curveTransition } from '@/components/animations/transitions';
 
 interface ProjectCardProps {
   index: number;
@@ -22,12 +25,23 @@ function ProjectCard({
       className="relative flex items-center h-96"
       dir={index % 2 === 0 ? 'rtl' : 'ltr'}
     >
-      <div
+      <MotionDiv
+        transition={{
+          ...curveTransition,
+          delayChildren: 0.5,
+          staggerChildren: 0.2,
+        }}
+        initial="initial"
+        animate="animate"
         className="z-10
           w-full md:w-1/2
           flex flex-col space-y-3"
       >
-        <h2
+        <motion.h2
+          variants={{
+            initial: { opacity: 0, y: 50 },
+            animate: { opacity: 1, y: 0 },
+          }}
           className="text-lg md:text-xl font-bold mb-1
               text-dracula-dark dark:text-dracula-light"
         >
@@ -39,8 +53,13 @@ function ProjectCard({
           >
             {name}
           </a>
-        </h2>
-        <div
+        </motion.h2>
+
+        <MotionDiv
+          variants={{
+            initial: { opacity: 0, y: 50 },
+            animate: { opacity: 1, y: 0 },
+          }}
           className="p-3
             rounded-xl
             bg-dracula-pink-50 dark:bg-dracula-pink-900
@@ -49,13 +68,19 @@ function ProjectCard({
             shadow-lg"
         >
           <p>{description}</p>
-        </div>
+        </MotionDiv>
 
-        <div className="flex space-x-2">
+        <MotionDiv
+          variants={{
+            initial: { opacity: 0, y: 50 },
+            animate: { opacity: 1, y: 0 },
+          }}
+          className="flex"
+        >
           {tags.map((tag, key) => (
             <div
               key={key}
-              className="px-3 py-1 rounded-xl
+              className="mx-1 px-3 py-1 rounded-xl
                 text-sm
                 text-dracula-purple-900 dark:text-dracula-purple-50
                 bg-dracula-purple-100 dark:bg-dracula-purple-900"
@@ -63,13 +88,20 @@ function ProjectCard({
               {tag}
             </div>
           ))}
-        </div>
-      </div>
+        </MotionDiv>
+      </MotionDiv>
 
       <a href={url} target="_blank" rel="noreferrer">
         {
           // eslint-disable-next-line @next/next/no-img-element
-          <img
+          <motion.img
+            variants={{
+              initial: { opacity: 0, y: 100 },
+              animate: { opacity: 1, y: 0 },
+            }}
+            initial="initial"
+            animate="animate"
+            transition={{ delay: 0.5 }}
             className="absolute top-0 ltr:right-0 rtl:left-0
               h-96 w-2/3
               rounded-xl
