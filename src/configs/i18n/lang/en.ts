@@ -1,4 +1,5 @@
 import { CAREER_DATA, EDUCATION_DATA } from '@/data/about';
+import { PROJECTS_DATA } from '@/data/projects';
 import { SKILLS_DATA } from '@/data/skills';
 
 const en = {
@@ -33,6 +34,12 @@ const en = {
     heading: 'My skills',
     description: 'My skills and knowledge',
     skillData: SKILLS_DATA.en,
+  },
+  project: {
+    title: 'Projects page | Bùi Đức Nhật website | Developer',
+    heading: 'My projects',
+    description: 'My projects',
+    data: PROJECTS_DATA.en,
   },
   about: {
     title: 'About me | Bùi Đức Nhật website | Developer',

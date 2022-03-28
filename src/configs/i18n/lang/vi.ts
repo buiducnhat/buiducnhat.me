@@ -1,5 +1,6 @@
 import { CAREER_DATA, EDUCATION_DATA } from '@/data/about';
 import { SKILLS_DATA } from '@/data/skills';
+import { PROJECTS_DATA } from '@/data/projects';
 
 const vi = {
   navbar: {
@@ -31,6 +32,12 @@ const vi = {
     heading: 'Kỹ năng',
     description: 'Kỹ năng và kiến thức',
     skillData: SKILLS_DATA.vi,
+  },
+  project: {
+    title: 'Projects | Bùi Đức Nhật website | Developer',
+    heading: 'Projects',
+    description: 'Dự án',
+    data: PROJECTS_DATA.vi,
   },
   about: {
     title: 'Về tác giả | Bùi Đức Nhật website | Developer',
