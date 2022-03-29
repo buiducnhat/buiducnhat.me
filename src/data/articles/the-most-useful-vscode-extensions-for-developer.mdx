@@ -75,7 +75,9 @@ You can install this extension <a href="https://marketplace.visualstudio.com/ite
 
 Of course, you can easily find out for your favorite themes at marketplace by type `icon` into the search input. The next step you just select and install them.
 
-## Bracket Pair Colorizer 2
+## Bracket Pair Colorizer 2 (deprecated)
+
+> _Note: This extension is now deprecated and no longer being supported. Instead, this is now a built in feature of `VS Code`._
 
 Have you ever known about _LISP_?
 
@@ -87,7 +89,20 @@ Look at this image and you will understand how it works
 
 ![bracket-colorizer-2-image](https://github.com/CoenraadS/Bracket-Pair-Colorizer-2/raw/HEAD/images/example.png)
 
-You can install this extension <a href="https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2" target="_blank" rel="noreferrer">here</a>.
+~~You can install this extension <a href="https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2" target="_blank" rel="noreferrer">here</a>.~~ (deprecated).
+
+Now you can enable `Black pair colorizer` as a native feature in `VS Code`.
+
+Just open your `settings.json` of your `VS Code` and add two following lines:
+
+```json
+{
+  ...
+  ​"editor.bracketPairColorization.enabled"​: ​true​,
+  ​​"editor.guides.bracketPairs"​: ​"active"​,
+  ...
+}
+```
 
 ## indent-rainbow
 
