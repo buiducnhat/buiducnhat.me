@@ -1,7 +1,4 @@
-import React, { useContext } from 'react';
-import { usePalette } from 'react-palette';
-
-import { ThemeContext } from '@/features/theme/theme.context';
+import React from 'react';
 import Image from 'next/image';
 
 interface SkillCardProps {
@@ -12,10 +9,6 @@ interface SkillCardProps {
 }
 
 function SkillCard({ title, description, url, imgUrl }: SkillCardProps) {
-  const { data: background } = usePalette(imgUrl);
-
-  const [theme] = useContext(ThemeContext);
-
   return (
     <a href={url} target="_blank" rel="noreferrer">
       <div
@@ -35,16 +28,14 @@ function SkillCard({ title, description, url, imgUrl }: SkillCardProps) {
             bg-dracula-light
             overflow-hidden"
         >
-          <div
-            className="absolute inset-0 opacity-25"
-            style={{
-              background:
-                theme.type === 'light'
-                  ? background.lightVibrant
-                  : background.darkVibrant,
-            }}
+          <Image
+            src={imgUrl}
+            alt={`${title} logo`}
+            width={48}
+            height={48}
+            placeholder="blur"
+            blurDataURL="https://via.placeholder.com/48"
           />
-          <Image src={imgUrl} alt={`${title} logo`} width={48} height={48} />
         </div>
 
         <div className="flex flex-col">
