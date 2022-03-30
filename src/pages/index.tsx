@@ -40,7 +40,7 @@ const HomePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
           <PageHeading>{i18n.home.popularArticles}</PageHeading>
 
           <div className="mt-8">
-            <ArticleList articles={articles?.slice(0, 3)} />
+            <ArticleList articles={articles} />
           </div>
 
           <div className="mt-10 text-center">
@@ -75,9 +75,13 @@ export const getStaticProps: GetStaticProps<{
       slug: filename.split('.')[0],
     };
   }) as Article[];
+
+  articles.sort(
+    (a1, a2) => new Date(a2.date).getTime() - new Date(a1.date).getTime()
+  );
   return {
     props: {
-      articles,
+      articles: articles.slice(0, 3),
     },
   };
 };

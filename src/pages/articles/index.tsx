@@ -65,6 +65,11 @@ export const getStaticProps: GetStaticProps<{
       slug: filename.split('.')[0],
     };
   }) as Article[];
+
+  articles.sort(
+    (a1, a2) => new Date(a2.date).getTime() - new Date(a1.date).getTime()
+  );
+
   return {
     props: {
       articles,
