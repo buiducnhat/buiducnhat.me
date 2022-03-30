@@ -4,6 +4,7 @@ import {
   DivProps,
   H1Props,
   H2Props,
+  ImgProps,
   LIProps,
   PProps,
   ULProps,
@@ -24,3 +25,5 @@ export const MotionP = motion<PProps>('p');
 export const MotionUl = motion<ULProps>('ul');
 
 export const MotionLi = motion<LIProps>('li');
+
+export const MotionImg = motion<ImgProps>('img');

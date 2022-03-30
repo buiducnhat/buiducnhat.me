@@ -1,7 +1,8 @@
-import { motion } from 'framer-motion';
 import React from 'react';
-import { MotionDiv } from '../animations';
+
 import { curveTransition } from '@/components/animations/transitions';
+import { MotionDiv, MotionH2, MotionImg } from '@/components/animations';
+import { fadeUpVariants } from '../animations/variants';
 
 interface ProjectCardProps {
   index: number;
@@ -22,7 +23,12 @@ function ProjectCard({
 }: ProjectCardProps) {
   return (
     <div
-      className="relative flex items-center h-96"
+      className="relative flex items-center
+        h-fit sm:h-96
+        bg-dracula-purple-100 dark:bg-dracula-blue-900
+        sm:bg-inherit dark:sm:bg-inherit
+        p-3 sm:p-0
+        rounded-xl sm:rounded-none"
       dir={index % 2 === 0 ? 'rtl' : 'ltr'}
     >
       <MotionDiv
@@ -34,10 +40,10 @@ function ProjectCard({
         initial="initial"
         animate="animate"
         className="z-10
-          w-full md:w-1/2
+          w-full sm:w-1/2
           flex flex-col space-y-3"
       >
-        <motion.h2
+        <MotionH2
           variants={{
             initial: { opacity: 0, y: 50 },
             animate: { opacity: 1, y: 0 },
@@ -53,7 +59,7 @@ function ProjectCard({
           >
             {name}
           </a>
-        </motion.h2>
+        </MotionH2>
 
         <MotionDiv
           variants={{
@@ -91,26 +97,28 @@ function ProjectCard({
         </MotionDiv>
       </MotionDiv>
 
-      <a href={url} target="_blank" rel="noreferrer">
+      <a
+        className="hidden sm:block"
+        href={url}
+        target="_blank"
+        rel="noreferrer"
+      >
         {
-          // eslint-disable-next-line @next/next/no-img-element
-          <motion.img
-            variants={{
-              initial: { opacity: 0, y: 100 },
-              animate: { opacity: 1, y: 0 },
-            }}
+          <MotionImg
+            variants={fadeUpVariants}
+            custom={0.5}
             initial="initial"
             animate="animate"
-            transition={{ delay: 0.5 }}
+            whileHover={{ scale: 1.05 }}
             className="absolute top-0 ltr:right-0 rtl:left-0
               h-96 w-2/3
               rounded-xl
               brightness-75 dark:brightness-50 blur-[1px]
               hover:brightness-100 dark:hover:brightness-100 
-              hover:blur-none hover:scale-105
+              hover:blur-none
               ring-1 ring-dracula-pink
               object-cover
-              duration-200"
+              duration-100"
             src={image}
             alt={name}
           />
