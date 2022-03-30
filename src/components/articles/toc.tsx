@@ -53,11 +53,12 @@ const HeadingLink = ({
   return (
     <Link href={`#${id}`} passHref scroll={true}>
       <a
-        className={
-          'text-lg text-dracula-purple ' +
-          `${isActive ? 'font-bold text-dracula-pink' : ''} ` +
-          'hover:text-dracula-pink'
-        }
+        className={`text-base
+          text-dracula-purple-500 dark:text-dracula-purple-300
+          hover:text-dracula-pink dark:hover:text-dracula-pink
+          ${
+            isActive ? 'font-bold text-dracula-pink dark:text-dracula-pink' : ''
+          }`}
       >
         {title}
       </a>
