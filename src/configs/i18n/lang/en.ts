@@ -29,6 +29,17 @@ const en = {
       'Articles of Bùi Đức Nhật, developer articles, tutorials, etc.',
     heading: 'My articles',
   },
+  articleWriting: {
+    heading: 'Writing article',
+    title: 'Title',
+    description: 'Description',
+    content: 'Content',
+    category: 'Category',
+    tags: 'Tags',
+    thumbnailUrl: 'Thumbnail URL',
+    save: 'Save',
+    saving: 'Saving...',
+  },
   skill: {
     title: 'Skills page | Bùi Đức Nhật website | Developer',
     heading: 'My skills',

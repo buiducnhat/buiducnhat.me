@@ -13,7 +13,10 @@ import Layout from '@/templates/layout';
 import { Article } from '@/models/article.model';
 import MDXRender from '@/components/articles/mdx-render';
 import Toc from '@/components/articles/toc';
-import { MY_NAME } from '@/configs/constants/common.constant';
+import {
+  MY_NAME,
+  PLACEHOLDER_IMG_URL,
+} from '@/configs/constants/common.constant';
 
 import { getDocs, getDoc, collection, doc } from 'firebase/firestore';
 import { firestore } from '@/configs/firebase.config';
@@ -39,14 +42,14 @@ const ArticlePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
               overflow-hidden"
             style={{
               backgroundImage: `url(${
-                article?.thumbnailUrl || '/images/placeholder.png'
+                article?.thumbnailUrl || PLACEHOLDER_IMG_URL
               })`,
             }}
           >
             {
               // eslint-disable-next-line @next/next/no-img-element
               <img
-                src={article?.thumbnailUrl || '/images/placeholder.png'}
+                src={article?.thumbnailUrl || PLACEHOLDER_IMG_URL}
                 alt="background"
                 className="w-full h-full
                   bg-no-repeat backdrop-blur object-contain"

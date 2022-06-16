@@ -4,6 +4,7 @@ import { format } from 'date-fns';
 import { Article } from '@/models/article.model';
 import { route } from '@/configs/routes.config';
 import NoScrollLink from '@/components/commons/no-scroll-link';
+import { PLACEHOLDER_IMG_URL } from '@/configs/constants/common.constant';
 
 interface ArticleCardProps {
   article: Article;
@@ -69,16 +70,14 @@ function ArticleCard({ article }: ArticleCardProps) {
 
       <div
         style={{
-          background: `url(${
-            article.thumbnailUrl || '/images/placeholder.png'
-          })`,
+          background: `url(${article.thumbnailUrl || PLACEHOLDER_IMG_URL})`,
         }}
         className="hidden md:block md:w-1/4"
       >
         {
           // eslint-disable-next-line @next/next/no-img-element
           <img
-            src={article.thumbnailUrl || '/images/placeholder.png'}
+            src={article.thumbnailUrl || PLACEHOLDER_IMG_URL}
             alt="background"
             className="w-full h-full
               bg-no-repeat backdrop-blur object-contain"

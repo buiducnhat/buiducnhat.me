@@ -27,6 +27,17 @@ const vi = {
     description: 'Bài viết của Bùi Đức Nhật, lập trình, dev, tutorials, ...',
     heading: 'Bài viết của tôi',
   },
+  articleWriting: {
+    heading: 'Viết bài',
+    title: 'Tiêu đề',
+    description: 'Mô tả',
+    content: 'Nội dung',
+    category: 'Danh mục',
+    tags: 'Tags',
+    thumbnailUrl: 'URL Ảnh đại diện',
+    save: 'Lưu',
+    saving: 'Đang lưu...',
+  },
   skill: {
     title: 'Kỹ năng | Bùi Đức Nhật website | Developer',
     heading: 'Kỹ năng',
