@@ -1,7 +1,5 @@
 import type { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next';
-import fs from 'fs';
-import path from 'path';
-import matter from 'gray-matter';
+import { getDocs, collection, orderBy, limit, query } from 'firebase/firestore';
 
 import Layout from '@/templates/layout';
 import Avatar from '@/components/home/avatar';
@@ -13,6 +11,7 @@ import NoScrollLink from '@/components/commons/no-scroll-link';
 import Socials from '@/components/home/socials';
 import ArticleList from '@/components/articles/article-list';
 import useTrans from '@/hooks/useTrans';
+import { firestore } from '@/configs/firebase.config';
 
 const HomePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
   articles,
@@ -63,25 +62,20 @@ const HomePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
 export const getStaticProps: GetStaticProps<{
   articles: Article[];
 }> = async () => {
-  const files = fs.readdirSync(path.join('src/data/articles'));
-  const articles = files.map((filename) => {
-    const markdownWithMeta = fs.readFileSync(
-      path.join('src/data/articles', filename),
-      'utf-8'
-    );
-    const { data: frontMatter } = matter(markdownWithMeta);
-    return {
-      ...frontMatter,
-      slug: filename.split('.')[0],
-    };
-  }) as Article[];
-
-  articles.sort(
-    (a1, a2) => new Date(a2.date).getTime() - new Date(a1.date).getTime()
+  const q = query(
+    collection(firestore, 'articles'),
+    orderBy('createdAt', 'desc'),
+    limit(3)
   );
+  const snapshots = await getDocs(q);
+  const articles = snapshots.docs.map((snapshot) => ({
+    ...snapshot.data(),
+    createdAt: snapshot.data().createdAt.toMillis(),
+  })) as Article[];
+
   return {
     props: {
-      articles: articles.slice(0, 3),
+      articles,
     },
   };
 };

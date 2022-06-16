@@ -5,9 +5,6 @@ import {
   InferGetStaticPropsType,
   NextPage,
 } from 'next';
-import fs from 'fs';
-import path from 'path';
-import matter from 'gray-matter';
 import { serialize } from 'next-mdx-remote/serialize';
 import rehypeSlug from 'rehype-slug';
 import remarkGfm from 'remark-gfm';
@@ -17,6 +14,9 @@ import { Article } from '@/models/article.model';
 import MDXRender from '@/components/articles/mdx-render';
 import Toc from '@/components/articles/toc';
 import { MY_NAME } from '@/configs/constants/common.constant';
+
+import { getDocs, getDoc, collection, doc } from 'firebase/firestore';
+import { firestore } from '@/configs/firebase.config';
 
 const ArticlePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
   article,
@@ -65,17 +65,21 @@ const ArticlePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const files = fs.readdirSync(path.join('src/data/articles'));
+  const snapshots = await getDocs(collection(firestore, 'articles'));
+  const slugs: string[] = snapshots.docs.map(
+    (snapshot) => snapshot.data().slug
+  );
+
   const paths = [
-    ...files.map((filename) => ({
+    ...slugs.map((slug) => ({
       params: {
-        slug: filename.replace('.mdx', ''),
+        slug,
         locale: 'en',
       },
     })),
-    ...files.map((filename) => ({
+    ...slugs.map((slug) => ({
       params: {
-        slug: filename.replace('.mdx', ''),
+        slug,
         locale: 'vi',
       },
     })),
@@ -91,24 +95,24 @@ export const getStaticProps: GetStaticProps<{
   article: Article;
 }> = async (context) => {
   const { slug } = context.params as { slug: string };
-  const markdownWithMeta = fs.readFileSync(
-    path.join('src/data/articles', slug + '.mdx'),
-    'utf-8'
-  );
-  const { data: frontMatter, content } = matter(markdownWithMeta);
-  const mdxSource = await serialize(content, {
+  const id = slug.split('-').slice(-1)[0];
+
+  const snapshot = await getDoc(doc(firestore, 'articles', id));
+  const article = snapshot.data() as Article;
+  article.createdAt = snapshot.data()?.createdAt.toMillis();
+
+  const mdxSource = await serialize(article.content, {
     mdxOptions: {
       remarkPlugins: [remarkGfm],
       rehypePlugins: [rehypeSlug],
     },
   });
-  const article = {
-    ...frontMatter,
-    slug,
-    content: mdxSource,
-  } as Article;
+  article.content = mdxSource;
+
   return {
-    props: { article },
+    props: {
+      article,
+    },
   };
 };
 

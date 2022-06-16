@@ -62,7 +62,7 @@ function ArticleCard({ article }: ArticleCardProps) {
             className="text-sm md:text-base
               text-dracula-blue-400 dark:text-dracula-blue-500"
           >
-            {format(new Date(article.date), 'yyyy MMM, dd')}
+            {format(new Date(article.createdAt), 'yyyy MMM, dd')}
           </span>
         </div>
       </div>

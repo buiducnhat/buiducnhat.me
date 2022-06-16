@@ -1,8 +1,6 @@
 import { useEffect, useState } from 'react';
 import type { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next';
-import fs from 'fs';
-import path from 'path';
-import matter from 'gray-matter';
+import { query, collection, getDocs } from 'firebase/firestore';
 
 import Layout from '@/templates/layout';
 import { Article } from '@/models/article.model';
@@ -10,6 +8,7 @@ import PageHeading from '@/components/commons/page-heading';
 import SearchArticlesInput from '@/components/articles/search-input';
 import ArticleList from '@/components/articles/article-list';
 import useTrans from '@/hooks/useTrans';
+import { firestore } from '@/configs/firebase.config';
 
 const ArticlesPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = (
   props
@@ -53,22 +52,13 @@ const ArticlesPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = (
 export const getStaticProps: GetStaticProps<{
   articles: Article[];
 }> = async () => {
-  const files = fs.readdirSync(path.join('src/data/articles'));
-  const articles = files.map((filename) => {
-    const markdownWithMeta = fs.readFileSync(
-      path.join('src/data/articles', filename),
-      'utf-8'
-    );
-    const { data: frontMatter } = matter(markdownWithMeta);
-    return {
-      ...frontMatter,
-      slug: filename.split('.')[0],
-    };
-  }) as Article[];
+  const q = query(collection(firestore, 'articles'));
+  const snapshots = await getDocs(q);
 
-  articles.sort(
-    (a1, a2) => new Date(a2.date).getTime() - new Date(a1.date).getTime()
-  );
+  const articles = snapshots.docs.map((snapshot) => ({
+    ...snapshot.data(),
+    createdAt: snapshot.data().createdAt.toMillis(),
+  })) as Article[];
 
   return {
     props: {

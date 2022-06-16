@@ -7,6 +7,6 @@ export interface Article {
   category: string;
   content: any;
   tags: string[];
-  date: string;
+  createdAt: Date | string | number;
   published: boolean;
 }
