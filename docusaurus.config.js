@@ -7,14 +7,15 @@ require('dotenv').config();
 const config = {
   title: 'Bùi Đức Nhật',
   tagline: 'SOFTWARE ENGINEER',
-  url: 'https://buiducnhat.me',
-  baseUrl: '/',
+  url: 'https://buiducnhat.github.io',
+  baseUrl: '/buiducnhat.me/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
 
   organizationName: 'buiducnhat',
   projectName: 'buiducnhat.me',
+  trailingSlash: true,
 
   i18n: {
     defaultLocale: 'vi',
