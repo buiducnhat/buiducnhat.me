@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkbuiducnhat_me=self.webpackChunkbuiducnhat_me||[]).push([[403],{2096:e=>{e.exports=JSON.parse('{"label":"vscode","permalink":"/buiducnhat.me/blogs/tags/vscode","allTagsPath":"/buiducnhat.me/blogs/tags","count":1}')}}]);
