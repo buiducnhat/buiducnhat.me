@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkbuiducnhat_me=self.webpackChunkbuiducnhat_me||[]).push([[4121],{8070:e=>{e.exports=JSON.parse('[{"label":"docker","permalink":"/buiducnhat.me/en/series/tags/docker","count":1}]')}}]);
