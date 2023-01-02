@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
         <title>Bùi Đức Nhật Blog</title>
-        <link>https://buiducnhat.me/blogs</link>
+        <link>https://buiducnhat.github.io/blogs</link>
         <description>Bùi Đức Nhật Blog</description>
         <lastBuildDate>Sun, 01 Jan 2023 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
@@ -10,7 +10,7 @@
         <language>vi</language>
         <item>
             <title><![CDATA[Code bẩn và kẻ thù của chúng]]></title>
-            <link>https://buiducnhat.me/blogs/2023/01/01/clean-code</link>
+            <link>https://buiducnhat.github.io/blogs/2023/01/01/clean-code</link>
             <guid>/2023/01/01/clean-code</guid>
             <pubDate>Sun, 01 Jan 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[Trong cuộc sống của các lập trình viên, những dòng code là thứ họ tiếp xúc còn nhiều hơn chính chiếc giường mà họ nằm, nhiều hơn cả thời gian họ dành cho người yêu hay người thân của mình. Vậy có nên hay không việc thường xuyên "dọn dẹp" những đoạn code đó trong quá trình làm việc?]]></description>
@@ -23,7 +23,7 @@ Nhiều câu hỏi sẽ được đặt ra khi xảy ra vấn đề đó: <code>
         </item>
         <item>
             <title><![CDATA[Các extension VS Code hữu ích cho lập trình viên]]></title>
-            <link>https://buiducnhat.me/blogs/2022/12/11/the-most-useful-vs-code-extensions-for-developers</link>
+            <link>https://buiducnhat.github.io/blogs/2022/12/11/the-most-useful-vs-code-extensions-for-developers</link>
             <guid>/2022/12/11/the-most-useful-vs-code-extensions-for-developers</guid>
             <pubDate>Sun, 11 Dec 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[Visual Studio Code hay VS Code, được phát hành bởi _Microsoft_, là một trong những công cụ soạn thảo code tốt nhất hiện nay]]></description>

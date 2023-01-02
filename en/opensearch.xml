@@ -4,8 +4,8 @@
   <ShortName>Bùi Đức Nhật</ShortName>
   <Description>Search Bùi Đức Nhật</Description>
   <InputEncoding>UTF-8</InputEncoding>
-  <Image width="16" height="16" type="image/x-icon">https://buiducnhat.me/en/img/favicon.ico</Image>
-  <Url type="text/html" method="get" template="https://buiducnhat.me/en/search?q={searchTerms}"/>
-  <Url type="application/opensearchdescription+xml" rel="self" template="https://buiducnhat.me/en/opensearch.xml" />
-  <moz:SearchForm>https://buiducnhat.me/en/</moz:SearchForm>
+  <Image width="16" height="16" type="image/x-icon">https://buiducnhat.github.io/en/img/favicon.ico</Image>
+  <Url type="text/html" method="get" template="https://buiducnhat.github.io/en/search?q={searchTerms}"/>
+  <Url type="application/opensearchdescription+xml" rel="self" template="https://buiducnhat.github.io/en/opensearch.xml" />
+  <moz:SearchForm>https://buiducnhat.github.io/en/</moz:SearchForm>
 </OpenSearchDescription>
