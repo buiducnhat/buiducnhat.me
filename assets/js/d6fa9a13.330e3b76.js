@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkbuiducnhat_me=self.webpackChunkbuiducnhat_me||[]).push([[3888],{5870:e=>{e.exports=JSON.parse('{"title":"Docker","slug":"/category/docker","permalink":"/series/category/docker","navigation":{"previous":{"title":"Welcome","permalink":"/series/"},"next":{"title":"Some Docker commands","permalink":"/series/docker/some-docker-commands"}}}')}}]);
