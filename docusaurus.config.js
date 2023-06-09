@@ -7,7 +7,7 @@ require('dotenv').config();
 const config = {
   title: 'Bùi Đức Nhật',
   tagline: 'SOFTWARE ENGINEER',
-  url: 'https://buiducnhat.me',
+  url: 'https://buiducnhat.github.io',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
